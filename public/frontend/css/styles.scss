@@ -1,0 +1,492 @@
+html {
+    overflow-x: hidden;
+}
+
+html p {
+    margin-bottom: 0px;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    background-color: #FFFCF6;
+}
+
+.oren{
+    color: #EA6941;
+}
+
+.kuning{
+    color: #F4BD5C;
+}
+
+.container-fluid {
+    background-color: #F4BD5C;
+    height: 100px;
+}
+
+.container-navbar{
+    margin-left: 135px;
+    margin-right: 135px;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+.navbar-brand span{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.navbar .nav-item {
+    margin-left: 73px;
+}
+
+.navbar .nav-item p{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #EA6941;  
+}
+
+.dropdowntext{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #EA6941;  
+}
+
+.container-navbar .nav-item i{
+    // width: 16px;
+    // height: 40px;
+    color: #EA6941;
+}
+
+.bacabuku1{
+    margin-top: 150px;
+}
+
+//landingpage 
+
+.section-content{
+    padding-top: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.section-content .title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    color: #000000;
+}
+
+.section-content .text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.section-content .btn-bookas{
+    margin-top: 50px;
+}
+
+.section-content .btn-bookas {
+    min-width: 230px;
+    background: #EA6941;
+    border-radius: 20px;
+}
+
+.section-content .btn-bookas p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    color: #FFFFFF !important;
+    text-align: center;
+}
+
+.btn-bookas:hover {
+    background-color: #D95B44, 100%;
+}
+
+//register
+
+.section-register{
+    padding-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.section-register form{
+    margin-top: 40px;
+}
+
+.section-register .form-daftar input{
+    width: 410px;
+    height: 44px;
+}
+
+.section-register .card {
+    position: absolute;
+    width: 470px;
+    height: 630px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.section-register .form-group label{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.section-register .form-daftar{
+    margin-top: 30px;
+}
+
+.section-register .form-masuk{
+    margin-top: 30px;
+}
+
+.section-register .form-group{
+    margin-top: 10px;
+}
+
+.section-register .card .btn-bookas {
+    width: 410px;
+    height: 44px;
+}
+
+//button bookas
+.btn-bookas {
+    background: #EA6941;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF !important;
+    text-align: center !important;
+}
+
+.btn-bookas p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF !important;
+    text-align: center;
+}
+
+.section-register .form-masuk .btn-bookas{
+    margin-top: 30px;
+}
+
+.section-register .form-masuk .lupasandi{
+    margin-left: 110px;
+    margin-top: 30px;
+}
+
+.section-register .dropdown-divider{
+    margin-top: 21px;
+    width: 410px;
+}
+
+.section-register .dropdown-item p{
+    margin-left: 80px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+//navbar homepage dkk
+
+.container-navbar .search .form-control{
+    margin-left: 50px;
+    border-radius: 15px;
+    width: 500px;
+    height: 44px;
+}
+
+.search input[type="submit"] {
+    position: relative;
+    margin-left: -50px;
+    background: url("/frontend/img/search.png") center no-repeat;
+    height: 30px;
+    width: 30px;
+}
+
+//homepage
+
+.section-topbar{
+    margin-left: 0px;
+}
+
+.section-topbar p{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #EA6941;  
+}
+
+.section-banner{
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.section-midcontent {
+    margin-top: 50px;
+}
+
+.card {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.section-midcontent .card {
+    height: 365px;
+}
+
+.section-midcontent .section-carddalam .card{
+    height: 200px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    border: 0px;
+    border-radius: 0px;
+}
+
+.section-midcontent .section-carddalam .row{
+    padding-top:20px;
+    margin-left: 0px;
+}
+
+.section-midcontent h1{
+    padding-top: 48px;
+    padding-left: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.book-title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.book-price{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #EA6941;
+}
+
+.section-midcontent .section-carddalam .book-title{
+    margin-top: 8px;
+}
+
+.section-midcontent .section-carddalam p{
+    margin-left: 10px;
+}
+
+.section-cardcontent{
+    margin-top: 50px;
+}
+
+.section-cardcontent .card{
+    height: 300px;
+}
+
+.section-cardcontent .text-card{
+    margin-top: 8px;
+}
+
+.section-cardcontent .card .text-card p{
+    margin-left: 10px;
+}
+
+.section-cardcontent .card button{
+    margin-top: 10px;
+    margin-left: 80px;
+}
+
+.section-cardcontent .card .btn-bookas{
+    width: 75px;
+    height: 30px;
+}
+
+.section-cardcontent .card .btn-bookas i{
+    padding-top: 0%;
+}
+
+.section-cardcontent .card .btn-bookas p{
+    margin-top: -5%;
+}
+
+//detailbuku
+
+.section-bookdetail{
+    margin-top: 50px;
+}
+
+.section-bookdetail .book-image{
+    height: 450px;
+}
+
+.section-bookdetail .midcont .title{
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.section-bookdetail .midcont .author{
+    font-size: 22px;
+}
+
+.section-bookdetail .midcont .author span{
+    font-weight: 500;
+}
+
+.section-bookdetail .midcont .title-cond{
+    margin-top: 35px;
+    font-weight: bold;
+    font-size: 22px;
+    color: #EA6941;
+}
+
+.section-bookdetail .midcont .detail-cond{
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+.section-bookdetail .cardbeli {
+    height: 207px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.section-bookdetail .cardbeli .content{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.section-bookdetail .cardbeli h4{
+    font-size: 20px;
+}
+
+.section-bookdetail .cardbeli h2{
+    font-size: 35px;
+}
+
+.section-bookdetail .cardbeli button{
+    width: 215px;
+    margin-top: 5px;
+    margin-left: 27px;
+}
+
+.section-bookdetail .cardbeli .btn-keranjang{
+    border: 1px solid #EA6941;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.section-bookdetail .cardbeli .btn-keranjang p{
+    color: #EA6941;
+}
+
+.section-carddetail .card{
+    margin-top: 50px;
+    height: 400px;
+}
+
+.section-carddetail .book-detail{
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.section-carddetail .book-detail .title{
+    font-weight: bold;
+    font-size: 22px;
+    color: #EA6941;
+}
+
+.section-carddetail .book-detail .row p{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.section-carddetail .book-detail .row .col-2{
+    margin-top: 12px;
+}
+
+.section-carddetail .book-detail .row .detail-title{
+    color: #C4C4C4;
+}
+
+.section-carddetail .book-detail .dropdown-divider{
+    width: 1130px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.section-carddetail .book-detail .text-detail{
+    margin-top: 12px;
+}
+
+///aaaaaaa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// footer
+
+.footer {
+    margin-top: 50px;
+}
+
+.footer .row{
+    margin-top: 50px;
+}
+
+.footer .row h1{
+    margin-top: 20px;
+}
+
+.footer a{
+    color:#000000;
+}
+
+.footer .text-center{
+    margin-top: 50px;
+}
+
+// cobacoba
+
+.box{
+    position: absolute;
+    background-color: #EA6941;
+    height: 100px;
+    width: 100px;
+}
+
+.box1{
+    position: absolute;
+    background-color: #F4BD5C;
+    height: 50px;
+    width: 50px;
+    bottom: 10%;
+}

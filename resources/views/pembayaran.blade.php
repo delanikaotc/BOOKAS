@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Pembayaran</title>
+    <!-- CSS -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container-navbar">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#"><img class="logo" src="img/Logo.png" alt=""><span class="ml-2">BOOKAS</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <div class="search">
+                        <ul class="navbar-nav mr-auto">
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <input class="btn btn-bookas my-2 my-sm-0" type="submit" value="">
+                            </form>
+                        </ul>
+                    </div>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link dropdown-toggle dropdowntext" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#EA6941">
+                          Kategori
+                        </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item ml-4">
+                            <a class="nav-link" href="#">
+                                <p>Cart</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ml-2">
+                            <a class="nav-link" href="#">
+                                <p>User10</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="container-header-pembayaran">
+            <div class="header-top">
+                Pembayaran
+            </div>
+            <hr class="hr1">
+            <div class="header-bottom">
+                <i class="fas fa-map-marker-alt mr-2" style='font-size:25px;color:#EA6941'></i>Alamat Pengiriman
+            </div>
+            <div class="row address-detail">
+                <div class="col-3">
+                    <div>Alvina Vania</div>
+                    <div>082246680465</div>
+                </div>
+                <div class="col-8">
+                    <div>Jl. Adu Rayu 31 No. 99, Kel. Srikaya, Kec. Apel</div>
+                    <div>Jatiasih, Bekasi</div>
+                </div>
+            </div>
+        </div>
+        <div class="container-cartitem">
+            <div class="row cartitem-top">
+                <div class="cartitem-top-avatar"><img src="img/avatar.png" alt="" class="avatar-cartitem"></div>
+                <div class="cartitem-top-nameAcc">Tika Store</div>
+            </div>
+            <hr class="hr1">
+            <div class="row cartitem-bottom">
+                <div class="col-2"><img src="img/buku5.png" alt="" class="bookcover-cartitem"></div>
+                <div class="col-8 book-cartitem">
+                    <div class="booktitle-cartitem">
+                        Wingit
+                    </div>
+                    <div class="caption-cartitem">
+                        Good condition, dijual karena BU
+                    </div>
+                </div>
+                <div class="col-2 subtotal-price" style="text-align: right;">Rp50.000,00</div>
+            </div>
+            <!-- <div class="container-subtotal">
+                <div class="row container-subtotal-detail">
+                    <div class="label-subtotal col-6">Total Pesanan:</div>
+                    <div class="label-subtotal ">Rp50.000,00</div>
+                </div>
+                <div class="row container-subtotal-detail">
+                    <div class="label-subtotal col-6">Ongkir:</div>
+                    <div class="label-subtotal">Rp9.000,00</div>
+                </div>
+            </div> -->
+        </div>
+        <div class="container-cartitem">
+            <div class="row cartitem-top">
+                <div class="cartitem-top-avatar pt-2">Metode Pembayaran</div>
+            </div>
+            <hr class="hr1">
+            <div class="row cartitem-bottom ml-1">
+                <button class="btn btn-secondary">Transfer</button>
+                <button class="btn btn-secondary">Kartu Kredit / Debit Online</button>
+                <button class="btn btn-secondary">COD (Bayar di Tempat)</button>
+                <button class="btn btn-secondary">Indomaret</button>
+                <button class="btn btn-secondary">Alfamart</button>
+                <button class="btn btn-secondary">BCA OneKlik</button>
+                <button class="btn btn-secondary">Kredivo</button>
+            </div>
+        </div>
+        <div class="container-cartitem">
+            <div class="row cartitem-top">
+                <div class="cartitem-top-avatar pt-2">Pilih Bank</div>
+            </div>
+            <hr class="hr1">
+            <div class="row cartitem-bottom ml-1" style="text-align: center;">
+                <div class="bank">
+                    <div class="bank-top"><img src="img/bni.png" alt="" class="bank-logo"></div>
+                    <div class="bank-bottom">BNI</div>
+                </div>
+                <div class="bank">
+                    <div class="bank-top"><img src="img/bni.png" alt="" class="bank-logo"></div>
+                    <div class="bank-bottom">BNI</div>
+                </div>
+            </div>
+        </div>
+        <div class="container-total">
+            <div class="row container-total-top">
+                <div class="labeltotal">Total Pesanan:</div>
+                <div class="totalcart">Rp50.000,00</div>
+            </div>
+            <div class="container-total-bottom">
+                <a class="btn btn-bookas" href="{{ url('bukti-transfer') }}"><p>Buat Pesanan</p></a>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="dropdown-divider"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-5">
+                        <h1 class="oren">BOOKAS</h1>
+                    </div>
+                    <div class="col-2">
+                        <h5>For Beginners</h5>
+                        <a href="">New Account</a> <br>
+                        <a href="">Booking Now</a><br>
+                        <a href="">Use Payments</a>
+                    </div>
+                    <div class="col-2">
+                        <h5>Explore Us</h5>
+                        <a href="">Our Careers</a><br>
+                        <a href="">Privacy</a><br>
+                        <a href="">Terms & Conditions</a>
+                    </div>
+                    <div class="col-2">
+                        <h5>Connect Us</h5>
+                        <a href="">support@BOOKAS.id</a><br>
+                        <a href="">022 - 5673 - 431</a><br>
+                        <a href="">Staycation, Kuningan Jakarta</a>
+                    </div>
+                </div>
+                <div class="text-center mb-3">
+                    <p>Copyright 2021 • All right reserved • BOOKAS</p>
+                </div>
+            </div>
+            <!-- jQuery and JS bundle w/ Popper.js -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous ">
+            </script>
+            <script src="https://kit.fontawesome.com/9923874ec2.js " crossorigin="anonymous "></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous ">
+            </script>
+        </footer>
+    </div>
+</body>
+
+</html>

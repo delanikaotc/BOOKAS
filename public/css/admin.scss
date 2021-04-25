@@ -1,0 +1,128 @@
+
+html {
+    overflow-x: hidden;
+}
+
+html p {
+    margin-bottom: 0px;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    background-color: #FFFCF6;
+}
+
+.oren{
+    color: #EA6941;
+}
+
+.kuning{
+    color: #F4BD5C;
+}
+
+.container-fluid {
+    background-color: #F4BD5C;
+    height: 100px;
+}
+
+.container-navbar{
+    margin-left: 45px;
+    // margin-right: 135px;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+.navbar-brand span{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+// .navbar .nav-item {
+//     margin-left: 73px;
+// }
+
+.navbar .nav-item p{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #EA6941;  
+}
+
+.sidenav {
+    height: 100%;
+    width: 327px;
+    position: fixed;
+    z-index: 1;
+    // top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    padding-top: 60px;
+    border-right: 1px solid #c4c4c4;
+}
+
+.sidenav a {
+    padding-left: 90px;
+    padding-top: 32px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: #c4c4c4;
+    display: block;
+}
+
+.sidenav button {
+    padding-left: 75px;
+    margin-top: 100px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: #c4c4c4;
+    display: block;
+}
+
+// .sidenav .navbar-brand {
+//     padding-top: 0px;
+//     padding-bottom: 40px;
+//     padding-left: 120px;
+// }
+
+.sidenav i {
+    margin-right: 15px;
+}
+
+.sidenav a:hover {
+    color: #D0853F;
+}
+
+.sidenav button:hover {
+    color: red;
+}
+
+.active {
+    color: #F4BD5C !important;
+    font-weight: 700 !important;
+}
+
+.main {
+    margin-left: 327px;
+    /* Same as the width of the sidenav */
+    font-size: 28px;
+    /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+.main h2{
+    margin-top: 60px;
+}
+
+.main .content-admin{
+    margin-top: 40px;
+}
