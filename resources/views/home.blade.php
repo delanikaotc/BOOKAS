@@ -36,15 +36,17 @@
                           Kategori
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
+                          <a class="dropdown-item" href="#">Pengetahuan</a>
+                          <a class="dropdown-item" href="#">Teknologi</a>
+                          <a class="dropdown-item" href="#">Hukum</a>
+                          <a class="dropdown-item" href="#">Memasak</a>
+                          <a class="dropdown-item" href="#">Bisnis</a>
                         </div>
                       </div>
                       </li>
                       <li class="nav-item ml-4">
-                        <a class="nav-link" href="{{ url('keranjang') }}"><i class="bi bi-bag-fill" href="#"></i></a>
-                        
+                        <!-- <a class="nav-link" href="{{ url('keranjang') }}"><i class="bi bi-handbag-fill" href="#"></i></a> -->
+                        <a class="nav-link" href="{{ url('keranjang') }}"><i class="bi bi-handbag-fill" style="font-size: 20px; color: #ffffff;"></i></i></a>
                       </li>
                     <li class="nav-item ml-2">
                       <a class="nav-link" href="#"><p>User10</p></a>
@@ -97,35 +99,35 @@
                         <div class="row">
                           <div class="col-2,5">
                             <div class="card">
-                              <img src="img/buku1.png" alt="" class="btn" href="#">
+                              <a href="{{ url('detail-buku') }}"><img src="img/buku1.png" alt="" href="#"></a>
                               <p class="book-title">Jalan-jalan</p>
                               <p class="book-price">Rp. 40.000</p>
                             </div>
                           </div>
                           <div class="col-2,5 ml-3">
                             <div class="card">
-                              <img src="img/buku1.png" alt="">
+                              <a href="{{ url('detail-buku') }}"><img src="img/buku1.png" alt="" href="#"></a>
                               <p class="book-title">Jalan-jalan</p>
                               <p class="book-price">Rp. 40.000</p>
                             </div>
                           </div>
                           <div class="col-2,5 ml-3">
                             <div class="card">
-                              <img src="img/buku1.png" alt="">
+                              <a href="{{ url('detail-buku') }}"><img src="img/buku1.png" alt="" href="#"></a>
                               <p class="book-title">Jalan-jalan</p>
                               <p class="book-price">Rp. 40.000</p>
                             </div>
                           </div>
                           <div class="col-2,5 ml-3">
                             <div class="card">
-                              <img src="img/buku1.png" alt="">
+                              <a href="{{ url('detail-buku') }}"><img src="img/buku1.png" alt="" href="#"></a>
                               <p class="book-title">Jalan-jalan</p>
                               <p class="book-price">Rp. 40.000</p>
                             </div>
                           </div>
                           <div class="col-2,5 ml-3">
                             <div class="card">
-                              <img src="img/buku1.png" alt="">
+                              <a href="{{ url('detail-buku') }}"><img src="img/buku1.png" alt="" href="#"></a>
                               <p class="book-title">Jalan-jalan</p>
                               <p class="book-price">Rp. 40.000</p>
                             </div>
@@ -150,7 +152,7 @@
         <div class="row">
           <div class="col-2">
             <div class="card" >
-              <img src="img/buku3.png" alt="" >
+              <a href="{{ url('detail-buku') }}"><img src="img/buku3.png" alt="" ></a>
               <div class="text-card">
               <p class="book-title">Sistem Informasi</p>
               <p class="book-price">Rp. 112.000</p>
@@ -160,7 +162,7 @@
           </div>
           <div class="col-2">
             <div class="card" >
-              <img src="img/buku3.png" alt="" >
+              <a href="{{ url('detail-buku') }}" ><img src="img/buku3.png" alt="" ></a>
               <div class="text-card">
               <p class="book-title">Sistem Informasi</p>
               <p class="book-price">Rp. 112.000</p>
@@ -170,7 +172,7 @@
           </div>
           <div class="col-2">
             <div class="card" >
-              <img src="img/buku4.png" alt="" >
+              <a href="{{ url('detail-buku') }}"><img src="img/buku4.png" alt="" ></a>
               <div class="text-card">
               <p class="book-title">Sistem Informasi</p>
               <p class="book-price">Rp. 112.000</p>
@@ -180,7 +182,7 @@
           </div>
           <div class="col-2">
             <div class="card" >
-              <img src="img/buku3.png" alt="" >
+              <a href="{{ url('detail-buku') }}"><img src="img/buku3.png" alt="" ></a>
               <div class="text-card">
               <p class="book-title">Sistem Informasi</p>
               <p class="book-price">Rp. 112.000</p>
@@ -190,7 +192,7 @@
           </div>
           <div class="col-2">
             <div class="card" >
-              <img src="img/buku4.png" alt="" >
+              <a href="{{ url('detail-buku') }}"><img src="img/buku4.png" alt="" ></a>
               <div class="text-card">
               <p class="book-title">Sistem Informasi</p>
               <p class="book-price">Rp. 112.000</p>
@@ -200,7 +202,7 @@
           </div>
           <div class="col-2">
             <div class="card" >
-              <img src="img/buku4.png" alt="" >
+              <a href="{{ url('detail-buku') }}"><img src="img/buku4.png" alt="" ></a>
               <div class="text-card">
               <p class="book-title">Sistem Informasi</p>
               <p class="book-price">Rp. 112.000</p>
@@ -220,7 +222,7 @@
         <div class="row">
           <div class="col-2">
             <div class="card" >
-              <img src="img/buku3.png" alt="" >
+              <a href="{{ url('detail-buku') }}"><img src="img/buku3.png" alt="" ></a>
               <div class="text-card">
               <p class="book-title">Sistem Informasi</p>
               <p class="book-price">Rp. 112.000</p>
@@ -230,7 +232,7 @@
           </div>
           <div class="col-2">
             <div class="card" >
-              <img src="img/buku3.png" alt="" >
+              <a href="{{ url('detail-buku') }}" ><img src="img/buku3.png" alt="" ></a>
               <div class="text-card">
               <p class="book-title">Sistem Informasi</p>
               <p class="book-price">Rp. 112.000</p>
@@ -240,7 +242,7 @@
           </div>
           <div class="col-2">
             <div class="card" >
-              <img src="img/buku4.png" alt="" >
+              <a href="{{ url('detail-buku') }}"><img src="img/buku4.png" alt="" ></a>
               <div class="text-card">
               <p class="book-title">Sistem Informasi</p>
               <p class="book-price">Rp. 112.000</p>
@@ -250,7 +252,7 @@
           </div>
           <div class="col-2">
             <div class="card" >
-              <img src="img/buku3.png" alt="" >
+              <a href="{{ url('detail-buku') }}"><img src="img/buku3.png" alt="" ></a>
               <div class="text-card">
               <p class="book-title">Sistem Informasi</p>
               <p class="book-price">Rp. 112.000</p>
@@ -260,7 +262,7 @@
           </div>
           <div class="col-2">
             <div class="card" >
-              <img src="img/buku4.png" alt="" >
+              <a href="{{ url('detail-buku') }}"><img src="img/buku4.png" alt="" ></a>
               <div class="text-card">
               <p class="book-title">Sistem Informasi</p>
               <p class="book-price">Rp. 112.000</p>
@@ -270,7 +272,7 @@
           </div>
           <div class="col-2">
             <div class="card" >
-              <img src="img/buku4.png" alt="" >
+              <a href="{{ url('detail-buku') }}"><img src="img/buku4.png" alt="" ></a>
               <div class="text-card">
               <p class="book-title">Sistem Informasi</p>
               <p class="book-price">Rp. 112.000</p>
