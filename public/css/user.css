@@ -1,0 +1,330 @@
+
+html {
+    overflow-x: hidden;
+  }
+  
+  html p {
+    margin-bottom: 0px;
+  }
+  
+  body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #FFFCF6;
+  }
+  
+  .oren {
+    color: #EA6941;
+  }
+  
+  .kuning {
+    color: #F4BD5C;
+  }
+  
+  .container-fluid {
+    background-color: #F4BD5C;
+    height: 100px;
+  }
+  
+  .container-navbar {
+    margin-left: 45px;
+    margin-right: 135px;
+  }
+  
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+  .container-navbar .search .form-control {
+    margin-left: 50px;
+    border-radius: 15px;
+    width: 500px;
+    height: 44px;
+  }
+  
+  .search input[type="submit"] {
+    z-index: 1;
+    position: relative;
+    margin-left: -50px;
+    background: url("img/search.png") center no-repeat;
+    height: 30px;
+    width: 30px;
+  }
+  .navbar-brand span {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: #FFFFFF;
+  }
+  .navbar .nav-item {
+    margin-left: 73px;
+  }
+  .navbar .nav-item p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #EA6941;
+  }
+  .dropdowntext {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #EA6941;
+  }
+  .sidenav {
+    height: 100%;
+    width: 325px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    padding-top: 15px;
+    border-right: 0px solid #c4c4c4;
+  }
+  
+  .sidenav a {
+    padding-left: 90px;
+    padding-top: 32px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: #c4c4c4;
+    display: block;
+  }
+  
+  .sidenav button {
+    padding-left: 90px;
+    margin-top: 18px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: #EA6941;
+    display: block;
+  }
+  
+  .sidenav i {
+    margin-right: 15px;
+  }
+  
+  .sidenav a:hover {
+    color: #D0853F;
+  }
+  
+  .sidenav button:hover {
+    color: red;
+  }
+  
+  .active {
+    background: #FFFFFF;
+        border-color: #EB3C18;
+  }
+  
+  .btn-prove {
+    background: #EB3C18;
+    border-radius: 5px;
+    text-align: right !important;
+    border-color: #EB3C18;
+    border-style: solid 1px;
+    font-style: normal;
+    float: right;
+    font-size: 14px;
+    color: #FFFFFF !important;
+    text-align: right;
+    margin-right: 36px;
+}
+.btn-edit {
+  background: #F4BD5C;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF !important;
+  text-align: center !important;
+}
+.btn-bookas {
+  background: #EA6941;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF !important;
+  text-align: center !important;
+}
+.btn-bookas p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF !important;
+  text-align: center;
+}    
+.container-header {
+  margin-top: 15px;
+  margin-bottom: -100px;
+  margin-left: -9px;
+  margin-right: 120px;
+  width: 1170px;
+  height: 170px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+
+.header-top {
+  font-size: 36px;
+  font-weight: 500;
+  padding-top: 6px;
+  padding-left: 24px;
+  /* margin-bottom: 12px; */
+}
+.h1 {
+  font-size: 1.5rem;
+  margin-top: -10px;
+  margin-bottom: -0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+
+}
+.hr1 {
+  width: 1170px;
+}
+.hr {
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+.header-bottom {
+  padding-left: 10px;
+  padding-top: 0px;
+  font-size: 10px;
+  font-weight: 200;
+  color: #EA6941;
+}
+
+.btn-secondary {
+  background: transparent;
+  border-radius: 10px;
+  text-align: center !important;
+  border-color: #EA6941;
+  border-style: solid 1px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  color: #EA6941 !important;
+  text-align: center;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.btn-secondary:hover {
+  background: transparent;
+  border-color: #EA6941;
+}
+
+.container-cartitem {
+  margin-bottom: -35px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 1170px;
+  height: 253px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #C4C4C4;
+}
+
+.cartitem-top {
+  padding-top: 5px;
+  padding-left: 15px;
+  font-size: 20px
+}
+
+.cartitem-top-avatar {
+  margin-right: 15px;
+  margin-left: 20px;
+  margin-block: auto;
+}
+
+.avatar-cartitem {
+  width: 40px;
+  height: 40px;
+}
+
+.cartitem-top-nameAcc {
+  padding-top: 6px;
+}
+
+.cartitem-bottom {
+  padding-top: 0px;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.book-cartitem {
+  margin-left: -84px;
+}
+
+.bookcover-cartitem {
+  width: 84px;
+  height: 140px;
+  border-radius: 10px;
+}
+
+.booktitle-cartitem {
+  font-weight: 600;
+}
+
+.price-cartitem {
+  padding-top: 24px;
+  margin-left: 26px;
+  margin-right: 26px;
+  text-align: right;
+}
+
+.delete-cartitem {
+  padding-top: 24px;
+  padding-left: 48px;
+  margin-left: 32px;
+}
+
+.btn-delete {
+  background: #EB3C18;
+  border-radius: 5px;
+  text-align: center !important;
+  border-color: #EB3C18;
+  border-style: solid 1px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF !important;
+  text-align: center;
+  margin-right: 36px;
+}
+
+.btn-delete:hover {
+  background: #EB3C18;
+  border-color: #EB3C18;
+}
+
+.footer-cart {
+  margin-top: 100px
+}
+
+  .main {
+    margin-left: 327px;
+    /* Same as the width of the sidenav */
+    font-size: 17px;
+    /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  .main h2 {
+    margin-top: 60px;
+  }
+  
+  .main .content-admin {
+    margin-top: 40px;
+  }
+  /*# sourceMappingURL=admin.css.map */
