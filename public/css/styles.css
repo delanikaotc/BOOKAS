@@ -296,6 +296,10 @@ body {
   height: 300px;
 }
 
+.section-cardcontent .card img {
+  width: 166px;
+}
+
 .section-cardcontent .text-card {
   margin-top: 8px;
 }

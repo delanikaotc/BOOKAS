@@ -16,7 +16,7 @@
   <div class="container-fluid">
     <div class="container-navbar">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#"><img class="logo" src="img/Logo.png" alt=""><span class="ml-2">BOOKAS</span></a>
+            <a class="navbar-brand" href="{{ url('/BOOKAS') }}"><img class="logo" src="img/Logo.png" alt=""><span class="ml-2">BOOKAS</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -32,10 +32,10 @@
               </ul>
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><p>Daftar</p></a>
+                    <a class="nav-link" href="{{ url('/daftar') }}"><p>Daftar</p></a>
                   </li>
                 <li class="nav-item ml-2">
-                  <a class="nav-link" href="#"><p>Masuk</p></a>
+                  <a class="nav-link" href="{{ url('/masuk') }}"><p>Masuk</p></a>
                 </li>
               </ul>
             </div>
@@ -50,7 +50,7 @@
                     <h1 class="title">ILMU PADA BUKU TIDAK AKAN BERUBAH  WALAUPUN BEKAS
                     </h1>
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                    <a href="" class="btn btn-bookas">
+                    <a href="{{ url('/daftar') }}" class="btn btn-bookas">
                         <p>MULAI CARI BUKU</p>
                     </a>
                 </div>

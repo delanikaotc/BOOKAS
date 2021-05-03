@@ -17,7 +17,7 @@
     <div class="container-fluid">
         <div class="container-navbar">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"><img class="logo" src="img/Logo.png" alt=""><span class="ml-2">BOOKAS</span></a>
+                <a class="navbar-brand" href="{{ url('home') }}"><img class="logo" src="img/Logo.png" alt=""><span class="ml-2">BOOKAS</span></a>
                 <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button> -->
@@ -47,10 +47,10 @@
                       </div>
                       </li>
                       <li class="nav-item ml-4">
-                        <a class="nav-link" href="#"><i class="bi bi-handbag-fill" style="font-size: 20px; color: #ffffff;"></i></i></a>
+                        <a class="nav-link" href="{{ url('keranjang') }}"><i class="bi bi-handbag-fill" style="font-size: 20px; color: #ffffff;"></i></i></a>
                       </li>
                     <li class="nav-item ml-2">
-                      <a class="nav-link" href="#"><p>User10</p></a>
+                      <a class="nav-link" href="{{ url('profile') }}"><p>User10</p></a>
                     </li>
                   </ul>
                 </div>

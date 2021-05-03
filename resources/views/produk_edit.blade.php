@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <title>Produkku</title>
+        <title>Sunting</title>
         <!-- CSS -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,8 +14,8 @@
     </head>
 
 <body>
-    <div class="container-fluid">
-    <div class="container-navbar">
+<div class="container-fluid">
+        <div class="container-navbar">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="{{ url('/home') }}"><img class="logo" src="img/Logo.png" alt=""><span class="ml-2">BOOKAS</span></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,101 +58,89 @@
           </div>
         </div>
     <!--END Navbar-->
+
     <div class="section-user">
       <div class="container-user">
         <div class="row">
           <div class="col-3">
             <div class="card">
-              <a href="{{ url('/profile') }}" style="color: #212121;" ><i class="bi bi-person-circle"></i> Alvina Vania</a>
-              <a href="{{ url('/pesanan') }}" style="color: #212121;" ><i class="bi bi-clipboard" ></i>  Pesanan</a>
+              <a href="{{ url('/profile') }}"  style="color: #212121;" ><i class="bi bi-person-circle"></i> Alvina Vania</a>
+              <a href="{{ url('/pesanan') }}" style="color: #212121;"><i class="bi bi-clipboard" ></i> Pesanan</a>
               <button class="btn-bookas">
-              <a href="{{ url('/produk') }}" style="color: #FFFFFF;"><i class="bi bi-journal" ></i>  Produk</a>
+              <a href="{{ url('/produk') }}" style="color: #FFFFFF;"><i class="bi bi-journal" ></i> Produk</a>
               </button>
-              <a href="{{ url('/penjualan') }}" style="color: #212121;"><i class="bi bi-file-earmark-bar-graph" ></i>  Penjualan</a>
-              <a href="{{ url('/penghasilan') }}" style="color: #212121;"><i class="bi bi-cash-stack" ></i>  Penghasilan</a>
-              <a href="#" style="color: #EA6941;"><i class="bi bi-box-arrow-right"></i>  Keluar</a>
+              <a href="{{ url('/penjualan') }}" style="color: #212121;"><i class="bi bi-file-earmark-bar-graph" ></i> Penjualan</a>
+              <a href="{{ url('/penghasilan') }}" style="color: #212121;"><i class="bi bi-cash-stack" ></i> Penghasilan</a>
+              <a href="#" style="color: #EA6941;"><i class="bi bi-box-arrow-right"></i> Keluar</a>
             </div>
           </div>
-        <!-- END sidebar -->
-
 
           <div class="col-9">
             <div class="card">
               <div class="card-cont">
-                  <h1>Buku Bekas Jualan Saya</h1>
+                  <h1>Sunting buku</h1>
                   <div class="dropdown-divider"></div>
-                  <a href="{{ url('/tambah-buku') }}" class="btn btn-bookas"><p>Tambah Buku +</p></a>
+                  <form>
+                    <div class="form-group row">
+                      <label for="inputPassword" class="col-sm-2 col-form-label">Judul Buku</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputJudul" >
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputPassword" class="col-sm-2 col-form-label">Pengarang</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputPengarang" >
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputPassword" class="col-sm-2 col-form-label">Deskripsi</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputDesc" >
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputPassword" class="col-sm-2 col-form-label">Kondisi</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputKondisi" >
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputPassword" class="col-sm-2 col-form-label">Penerbit</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputPenerbit" >
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputPassword" class="col-sm-2 col-form-label">Tahun Terbit</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputTahunTerbit" >
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputPassword" class="col-sm-2 col-form-label">Harga</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputHarga" >
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputPassword" class="col-sm-2 col-form-label">Gambar</label>
+                      <div class="col-sm-10">
+                      <button type="submit" class="btn btn-edit"> <p>Upload</p></button>
+                      </div>
+                    </div>
+                  </form>
+                  <button type="submit" class="btn btn-bookas"> <p>Simpan</p></button>
                 </div>
             </div>
-            <!-- LANJUT -->
+            <!-- END Profilesaya -->
             
-            <div class="section-myitem">
-                <div class="row">
-                    <div class="col-2,9">
-                        <div class="card" >
-                            <a href="{{ url('detail-buku') }}" ><img src="img/buku3.png" alt="" ></a>
-                            <div class="text-card">
-                            <p class="book-title">Sistem Informasi</p>
-                            <p class="book-price">Rp. 112.000</p>
-                            </div>
-                            <div class="row">
-                            <a href="{{ url('edit-buku') }}" class="btn btn-edit"><p> Edit</p></a>
-                            <button type="submit" class="btn btn-hapus"><p> Hapus</p></button>
-                            </div>
-                        </div>
-                    </div>  
-
-                    <div class="col-2,9">
-                        <div class="card" >
-                            <a href="{{ url('detail-buku') }}" ><img src="img/buku3.png" alt="" ></a>
-                            <div class="text-card">
-                            <p class="book-title">Sistem Informasi</p>
-                            <p class="book-price">Rp. 112.000</p>
-                            </div>
-                            <div class="row">
-                            <button class="btn btn-edit"><p> Edit</p></button>
-                            <button type="submit" class="btn btn-hapus"><p> Hapus</p></button>
-                            </div>
-                        </div>
-                    </div>  
-
-                    <div class="col-2,9">
-                        <div class="card" >
-                            <a href="{{ url('detail-buku') }}" ><img src="img/buku3.png" alt="" ></a>
-                            <div class="text-card">
-                            <p class="book-title">Sistem Informasi</p>
-                            <p class="book-price">Rp. 112.000</p>
-                            </div>
-                            <div class="row">
-                            <button type="submit" class="btn btn-edit"><p> Edit</p></button>
-                            <button type="submit" class="btn btn-hapus"><p> Hapus</p></button>
-                            </div>
-                        </div>
-                    </div>  
-
-                    <div class="col-2,9">
-                        <div class="card" >
-                            <a href="{{ url('detail-buku') }}" ><img src="img/buku3.png" alt="" ></a>
-                            <div class="text-card">
-                            <p class="book-title">Sistem Informasi</p>
-                            <p class="book-price">Rp. 112.000</p>
-                            </div>
-                            <div class="row">
-                            <button type="submit" class="btn btn-edit"><p> Edit</p></button>
-                            <button type="submit" class="btn btn-hapus"><p> Hapus</p></button>
-                            </div>
-                        </div>
-                    </div>  
-                </div>
-            </div>
-           
-
-          </div>
+            
         </div>
       </div>
-    </div>   
-    <!--END sidebar-->
-    
+    </div>    
+  <!-- END MIDCONTENT -->
+
 
 <footer class="footer">
   <div class="dropdown-divider"></div>
@@ -195,5 +183,4 @@
     </script>
     
 </footer>
-
 

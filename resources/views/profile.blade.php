@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <title>Produkku</title>
+        <title>Profile</title>
         <!-- CSS -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,8 +14,8 @@
     </head>
 
 <body>
-    <div class="container-fluid">
-    <div class="container-navbar">
+<div class="container-fluid">
+        <div class="container-navbar">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="{{ url('/home') }}"><img class="logo" src="img/Logo.png" alt=""><span class="ml-2">BOOKAS</span></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,101 +58,100 @@
           </div>
         </div>
     <!--END Navbar-->
+
     <div class="section-user">
       <div class="container-user">
         <div class="row">
           <div class="col-3">
             <div class="card">
-              <a href="{{ url('/profile') }}" style="color: #212121;" ><i class="bi bi-person-circle"></i> Alvina Vania</a>
-              <a href="{{ url('/pesanan') }}" style="color: #212121;" ><i class="bi bi-clipboard" ></i>  Pesanan</a>
               <button class="btn-bookas">
-              <a href="{{ url('/produk') }}" style="color: #FFFFFF;"><i class="bi bi-journal" ></i>  Produk</a>
+              <a href="#" style="color: #FFFFFF;" ><i class="bi bi-person-circle"></i> Alvina Vania</a>
               </button>
-              <a href="{{ url('/penjualan') }}" style="color: #212121;"><i class="bi bi-file-earmark-bar-graph" ></i>  Penjualan</a>
-              <a href="{{ url('/penghasilan') }}" style="color: #212121;"><i class="bi bi-cash-stack" ></i>  Penghasilan</a>
-              <a href="#" style="color: #EA6941;"><i class="bi bi-box-arrow-right"></i>  Keluar</a>
+              <a href="{{ url('/pesanan') }}" style="color: #212121;"><i class="bi bi-clipboard" ></i> Pesanan</a>
+              <a href="{{ url('/produk') }}" style="color: #212121;"><i class="bi bi-journal" ></i> Produk</a>
+              <a href="{{ url('/penjualan') }}" style="color: #212121;"><i class="bi bi-file-earmark-bar-graph" ></i> Penjualan</a>
+              <a href="{{ url('/penghasilan') }}" style="color: #212121;"><i class="bi bi-cash-stack" ></i> Penghasilan</a>
+              <a href="#" style="color: #EA6941;"><i class="bi bi-box-arrow-right"></i> Keluar</a>
             </div>
           </div>
-        <!-- END sidebar -->
-
 
           <div class="col-9">
             <div class="card">
               <div class="card-cont">
-                  <h1>Buku Bekas Jualan Saya</h1>
+                  <h1>Profil Saya</h1>
+                  <h5>Kelola Profilemu!<h5>
                   <div class="dropdown-divider"></div>
-                  <a href="{{ url('/tambah-buku') }}" class="btn btn-bookas"><p>Tambah Buku +</p></a>
+                  <form>
+                    <div class="form-group row">
+                      <label for="staticEmail" class="col-sm-2 col-form-label">Username</label>
+                      <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="alvinakrn">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputPassword" class="col-sm-2 col-form-label">Email</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputPassword" class="col-sm-2 col-form-label">Nama</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputNama" placeholder="Nama">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputPassword" class="col-sm-2 col-form-label">No. Telp</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputNoTelp" placeholder="Nomer">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputPassword" class="col-sm-2 col-form-label">Alamat</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputAlamat" placeholder="Alamat">
+                      </div>
+                    </div>
+                  </form>
+                  <button type="submit" class="btn btn-bookas"> <p>Simpan</p></button>
                 </div>
             </div>
-            <!-- LANJUT -->
-            
-            <div class="section-myitem">
-                <div class="row">
-                    <div class="col-2,9">
-                        <div class="card" >
-                            <a href="{{ url('detail-buku') }}" ><img src="img/buku3.png" alt="" ></a>
-                            <div class="text-card">
-                            <p class="book-title">Sistem Informasi</p>
-                            <p class="book-price">Rp. 112.000</p>
+            <!-- END Profilesaya -->
+            <div class="lanjut">
+                <div class="card">
+                    <div class="card-cont">
+                          <h1>Rekening Saya</h1>
+                          <div class="dropdown-divider"></div>
+                          <form>
+                            <div class="form-group row">
+                              <label for="inputPassword" class="col-sm-2 col-form-label">Nama Bank</label>
+                              <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputBank" placeholder="Bank">
+                              </div>
                             </div>
-                            <div class="row">
-                            <a href="{{ url('edit-buku') }}" class="btn btn-edit"><p> Edit</p></a>
-                            <button type="submit" class="btn btn-hapus"><p> Hapus</p></button>
+                            <div class="form-group row">
+                              <label for="inputPassword" class="col-sm-2 col-form-label">No. Rekening</label>
+                              <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputNoRek" placeholder="Nomor">
+                              </div>
                             </div>
-                        </div>
-                    </div>  
-
-                    <div class="col-2,9">
-                        <div class="card" >
-                            <a href="{{ url('detail-buku') }}" ><img src="img/buku3.png" alt="" ></a>
-                            <div class="text-card">
-                            <p class="book-title">Sistem Informasi</p>
-                            <p class="book-price">Rp. 112.000</p>
+                            <div class="form-group row">
+                              <label for="inputPassword" class="col-sm-2 col-form-label">Nama</label>
+                              <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputNama" placeholder="Nama">
+                              </div>
                             </div>
-                            <div class="row">
-                            <button class="btn btn-edit"><p> Edit</p></button>
-                            <button type="submit" class="btn btn-hapus"><p> Hapus</p></button>
-                            </div>
-                        </div>
-                    </div>  
-
-                    <div class="col-2,9">
-                        <div class="card" >
-                            <a href="{{ url('detail-buku') }}" ><img src="img/buku3.png" alt="" ></a>
-                            <div class="text-card">
-                            <p class="book-title">Sistem Informasi</p>
-                            <p class="book-price">Rp. 112.000</p>
-                            </div>
-                            <div class="row">
-                            <button type="submit" class="btn btn-edit"><p> Edit</p></button>
-                            <button type="submit" class="btn btn-hapus"><p> Hapus</p></button>
-                            </div>
-                        </div>
-                    </div>  
-
-                    <div class="col-2,9">
-                        <div class="card" >
-                            <a href="{{ url('detail-buku') }}" ><img src="img/buku3.png" alt="" ></a>
-                            <div class="text-card">
-                            <p class="book-title">Sistem Informasi</p>
-                            <p class="book-price">Rp. 112.000</p>
-                            </div>
-                            <div class="row">
-                            <button type="submit" class="btn btn-edit"><p> Edit</p></button>
-                            <button type="submit" class="btn btn-hapus"><p> Hapus</p></button>
-                            </div>
-                        </div>
-                    </div>  
-                </div>
-            </div>
-           
-
+                          </form>
+                      <button type="submit" class="btn btn-bookas">Simpan</button>
+                    </div>
+                  </div>
+              </div>
           </div>
         </div>
       </div>
-    </div>   
-    <!--END sidebar-->
-    
+    </div>    
+  <!-- END MIDCONTENT -->
+
 
 <footer class="footer">
   <div class="dropdown-divider"></div>
@@ -195,5 +194,4 @@
     </script>
     
 </footer>
-
 

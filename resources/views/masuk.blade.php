@@ -16,7 +16,7 @@
   <div class="container-fluid">
     <div class="container-navbar">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#"><img class="logo" src="img/Logo.png" alt=""><span class="ml-2">BOOKAS</span></a>
+            <a class="navbar-brand" href="{{ url('/BOOKAS') }}"><img class="logo" src="img/Logo.png" alt=""><span class="ml-2">BOOKAS</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -51,10 +51,10 @@
                                     <label for="exampleDropdownFormPassword1">Kata sandi:</label>
                                     <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
                                   </div>
-                                <button type="submit" class="btn btn-bookas"><p>Masuk</p></button>
+                                <button href="{{ url('/home') }}" type="submit" class="btn btn-bookas"><p>Masuk</p></button>
                                 <a class="dropdown-item" href="#"><p class="lupasandi">Lupa kata sandi?</p></a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#"><p class="oren">Belum punya akun? Daftar</p></a>
+                                <a class="dropdown-item" href="{{ url('/daftar') }}"><p class="oren">Belum punya akun? Daftar</p></a>
                             </section>   
                         </form>
                     </div>

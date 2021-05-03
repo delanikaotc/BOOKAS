@@ -1,0 +1,273 @@
+html {
+  overflow-x: hidden;
+}
+
+html p {
+  margin-bottom: 0px;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #FFFCF6;
+}
+
+.oren {
+  color: #EA6941;
+}
+
+.kuning {
+  color: #F4BD5C;
+}
+
+.container-fluid {
+  background-color: #F4BD5C;
+  height: 100px;
+}
+
+.container-navbar {
+  margin-left: 135px;
+  margin-right: 135px;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+}
+
+.navbar-brand span {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  color: #FFFFFF;
+}
+
+.navbar .nav-item {
+  margin-left: 73px;
+}
+
+.navbar .nav-item p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: #EA6941;
+}
+
+.dropdowntext {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: #EA6941;
+}
+
+.container-navbar .nav-item i {
+  color: #EA6941;
+}
+
+.navbar .nav-item p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: #EA6941;
+}
+
+.container-navbar .search .form-control {
+  margin-left: 50px;
+  border-radius: 15px;
+  width: 500px;
+  height: 44px;
+}
+
+.search input[type="submit"] {
+  position: relative;
+  margin-left: -50px;
+  background: url("/frontend/img/search.png") center no-repeat;
+  height: 30px;
+  width: 30px;
+}
+
+.btn-bookas {
+  background: #EA6941;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF !important;
+  text-align: center !important;
+}
+
+.btn-bookas p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF !important;
+  text-align: center;
+}
+
+.section-user {
+  margin-top: 50px;
+}
+
+.container-user {
+  margin-left: 135px;
+  margin-right: 135px;
+}
+
+.container-user .col-3 .card {
+  background-color: #FFFCF6;
+  border: 0px solid #c4c4c4;
+  border-radius: 10px;
+}
+
+.container-user .col-3 .card .btn-bookas {
+  margin-top: 35px;
+  width: 250px;
+  height: 50px;
+  border: 0px;
+}
+
+.container-user .col-3 .card .btn-bookas a {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.container-user .col-3 .card a {
+  margin-top: 35px;
+  font-size: 22px;
+}
+
+.container-user .row .col-9 .card-cont {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.container-user .row .col-9 .btn-bookas {
+  margin-bottom: 24px;
+  width: 200px;
+}
+
+.container-user .row .col-9 .lanjut {
+  margin-top: 20px;
+}
+
+.container-user .row .col-9 .card-item .card {
+  margin-top: 30px;
+}
+
+.container-user .col-9 .card-item .card-cont {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.container-user .row .col-9 .card-item a {
+  margin-left: 20px;
+}
+
+.container-user .row .col-9 .card-item .book-cover {
+  height: 190px;
+  width: 120px;
+}
+
+.section-myitem {
+  margin-top: 50px;
+}
+
+.section-myitem .row .card {
+  margin-left: 15px;
+  background-color: #FFFFFF;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  background-color: #FFFFFF !important;
+  height: 300px;
+}
+
+.section-myitem .row .btn-edit {
+  margin-top: 4px;
+  margin-left: 20px;
+  width: 75px;
+}
+
+.section-myitem .row .btn-hapus {
+  margin-top: 4px;
+  margin-left: 6px;
+  width: 75px;
+}
+
+.section-myitem .text-card {
+  margin-top: 8px;
+}
+
+.section-myitem .card .text-card p {
+  margin-left: 10px;
+}
+
+.btn-edit {
+  background: #F4BD5C;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF !important;
+  text-align: center !important;
+}
+
+.btn-edit p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF !important;
+  text-align: center;
+}
+
+.btn-hapus {
+  background: #EB3C18;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF !important;
+  text-align: center !important;
+}
+
+.btn-hapus p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF !important;
+  text-align: center;
+}
+
+.book-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.book-price {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #EA6941;
+}
+
+.footer {
+  margin-top: 50px;
+}
+
+.footer .row {
+  margin-top: 50px;
+}
+
+.footer .row h1 {
+  margin-top: 20px;
+}
+
+.footer a {
+  color: #000000;
+}
+
+.footer .text-center {
+  margin-top: 50px;
+}
+/*# sourceMappingURL=pengguna.css.map */

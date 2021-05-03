@@ -46,10 +46,11 @@
                                 <table class="table m-0">
                                     <thead>
                                         <tr>
-                                            <th scope="col">No. Transaksi</th>
+                                            <th scope="col">No. Trans</th>
                                             <th scope="col">No. User</th>
                                             <th scope="col">No. Buku</th>
                                             <th scope="col">Tanggal</th>
+                                            <th scope="col">Total</th>
                                             <th scope="col">Status</th>
                                             <th scope="col">Edit</th>
                                             <th scope="col">Delete</th>
@@ -61,6 +62,7 @@
                                             <td>Mark</td>
                                             <td>Otto</td>
                                             <td>17 Agustus 2020</td>
+                                            <td>Rp. 200.000</td>
                                             <td>
                                                 <div class="btn-group">
                                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -84,6 +86,7 @@
                                             <td>Jacob</td>
                                             <td>Thornton</td>
                                             <td>17 Agustus 2020</td>
+                                            <td>Rp. 200.000</td>
                                             <td>
                                                 <div class="btn-group">
                                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -107,6 +110,7 @@
                                             <td>Larry</td>
                                             <td>Bird</td>
                                             <td>17 Agustus 2020</td>
+                                            <td>Rp. 200.000</td>
                                             <td>
                                                 <div class="btn-group">
                                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -130,6 +134,7 @@
                                             <td>Martin</td>
                                             <td>Williams</td>
                                             <td>17 Agustus 2020</td>
+                                            <td>Rp. 200.000</td>
                                             <td>
                                                 <div class="btn-group">
                                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
