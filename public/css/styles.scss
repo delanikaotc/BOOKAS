@@ -445,20 +445,6 @@ body{
     margin-top: 12px;
 }
 
-///aaaaaaa
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // footer
 
@@ -498,3 +484,338 @@ body{
     width: 50px;
     bottom: 10%;
 }
+
+
+//cart
+
+.container-header {
+    margin-top: 70px;
+    margin-bottom: 24px;
+    margin-left: 135px;
+    margin-right: 135px;
+    width: 1170px;
+    height: 167px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.header-top {
+    font-size: 36px;
+    font-weight: 500;
+    padding-top: 6px;
+    padding-left: 24px;
+    /* margin-bottom: 12px; */
+}
+
+.hr1 {
+    width: 1122px;
+}
+
+.header-bottom {
+    padding-left: 24px;
+    padding-top: 6px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #EA6941;
+}
+
+.btn-secondary {
+    background: transparent;
+    border-radius: 10px;
+    text-align: center !important;
+    border-color: #EA6941;
+    border-style: solid 1px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    color: #EA6941 !important;
+    text-align: center;
+    margin-right: 36px;
+    margin-bottom: 24px;
+}
+
+.btn-secondary:hover {
+    background: transparent;
+    border-color: #EA6941;
+}
+
+.container-cartitem {
+    margin-bottom: 24px;
+    margin-left: 135px;
+    margin-right: 135px;
+    width: 1170px;
+    height: 253px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C4C4C4;
+}
+
+.cartitem-top {
+    padding-top: 8px;
+    padding-left: 16px;
+    font-size: 22px
+}
+
+.cartitem-top-avatar {
+    margin-right: 14px;
+    margin-left: 24px;
+}
+
+.avatar-cartitem {
+    width: 40px;
+    height: 40px;
+}
+
+.cartitem-top-nameAcc {
+    padding-top: 6px;
+}
+
+.cartitem-bottom {
+    padding-top: 6px;
+    padding-left: 24px;
+    font-size: 18px;
+}
+
+.book-cartitem {
+    margin-left: -84px;
+}
+
+.bookcover-cartitem {
+    width: 84px;
+    height: 140px;
+    border-radius: 10px;
+}
+
+.booktitle-cartitem {
+    font-weight: 600;
+}
+
+.price-cartitem {
+    padding-top: 24px;
+    margin-left: 26px;
+    margin-right: 26px;
+}
+
+.delete-cartitem {
+    padding-top: 24px;
+    padding-left: 48px;
+    margin-left: 32px;
+}
+
+.btn-delete {
+    background: #EB3C18;
+    border-radius: 5px;
+    text-align: center !important;
+    border-color: #EB3C18;
+    border-style: solid 1px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF !important;
+    text-align: center;
+    margin-right: 36px;
+}
+
+.btn-delete:hover {
+    background: #EB3C18;
+    border-color: #EB3C18;
+}
+
+.footer-cart {
+    margin-top: 100px
+}
+
+.container-total {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    margin-bottom: -50px;
+    margin-left: 135px;
+    margin-right: 135px;
+    width: 1170px;
+    height: 155px;
+    background-color: #FFFBFA;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px 5px 0px 0px;
+    border-color: #C4C4C4 !important;
+}
+
+.container-total-top {
+    padding-top: 8px;
+    padding-left: 16px;
+    font-size: 22px
+}
+
+.labeltotal {
+    font-size: 22px;
+    font-weight: 500;
+    margin-right: 12px;
+    margin-left: 735px;
+    padding-top: 16px;
+}
+
+.totalcart {
+    font-size: 36px;
+    font-weight: 500;
+    color: #EA6941;
+}
+
+.container-total-bottom {
+    margin-right: 12px;
+    margin-left: 975px;
+    padding-top: 16px;
+}
+
+.container-header-pembayaran {
+    margin-top: 70px;
+    margin-bottom: 24px;
+    margin-left: 135px;
+    margin-right: 135px;
+    width: 1170px;
+    height: 244px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.address-detail {
+    font-size: 22px;
+    font-weight: 500;
+    padding-top: 24px;
+    padding-left: 24px;
+}
+
+.container-subtotal {
+    width: 1170px;
+    height: 129px;
+    margin-top: 16px;
+    margin-bottom: 100px;
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C4C4C4;
+    border-radius: 0px 0px 10px 10px;
+    margin-left: -1px;
+    font-size: 22px;
+}
+
+.container-subtotal-detail {
+    margin-left: 810px;
+    margin-top: 24px;
+    text-align: right;
+}
+
+.label-subtotal {
+    margin-left: 12px;
+}
+
+.subtotal-price {
+    padding-top: 24px;
+    margin-left: 42px;
+    margin-right: 26px;
+}
+
+.bank-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.bank-bottom {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.bank {
+    margin-right: 86px;
+}
+
+.title-infopembayaran {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-top: 14px;
+}
+
+.container-infopembayaran {
+    width: 1170px;
+    height: 151px;
+    margin-left: 135px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-size: 22px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.icon-bank {
+    width: 30px;
+    height: 30px;
+}
+
+.detail-bank {
+    margin-left: -52px;
+}
+
+.infopembayaran-bottom {
+    margin-left: 10px;
+    padding-top: 18px;
+    font-size: 22px;
+}
+
+.btn-uploadbuktitrf {
+    background: #EA6941;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF !important;
+    text-align: center !important;
+    width: 1169px;
+    height: 44px;
+    margin-left: 135px;
+}
+
+.btn-uploadbuktitrf p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF !important;
+    text-align: center;
+}
+
+.btn-uploadbuktitrf:hover {
+    background-color: #D95B44, 100%;
+}
+
+.btn-uploadbuktitrf2 {
+    background: transparent;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #EA6941 !important;
+    text-align: center !important;
+    width: 1169px;
+    height: 44px;
+    margin-left: 135px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #EA6941;
+}
+
+.btn-uploadbuktitrf2 p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #EA6941 !important;
+    text-align: center;
+}
+
+.btn-uploadbuktitrf2:hover {
+    background-color: transparent, 100%;
+}
+/*# sourceMappingURL=styles.css.map */
