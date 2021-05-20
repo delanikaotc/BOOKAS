@@ -182,6 +182,10 @@ body {
   height: 300px;
 }
 
+.section-myitem .row .card img {
+  width: 100%;
+}
+
 .section-myitem .row .btn-edit {
   margin-top: 4px;
   margin-left: 20px;

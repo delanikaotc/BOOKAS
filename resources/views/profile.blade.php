@@ -10,51 +10,13 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <link rel="stylesheet" href="css/pengguna.css">
-    
+
     </head>
 
 <body>
 <div class="container-fluid">
         <div class="container-navbar">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="{{ url('/home') }}"><img class="logo" src="img/Logo.png" alt=""><span class="ml-2">BOOKAS</span></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                  <div class="search">
-                  <ul class="navbar-nav mr-auto">
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <input class="btn btn-bookas my-2 my-sm-0" type="submit" value="">
-                      </form>
-                  </ul>
-                  </div>
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                      <div class="dropdown">
-                        <a class="nav-link dropdown-toggle dropdowntext" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#EA6941">
-                          Kategori
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="#">Pengetahuan</a>
-                          <a class="dropdown-item" href="#">Teknologi</a>
-                          <a class="dropdown-item" href="#">Hukum</a>
-                          <a class="dropdown-item" href="#">Memasak</a>
-                          <a class="dropdown-item" href="#">Bisnis</a>
-                        </div>
-                      </div>
-                      </li>
-                      <li class="nav-item ml-4">
-                        <!-- <a class="nav-link" href="{{ url('keranjang') }}"><i class="bi bi-handbag-fill" href="#"></i></a> -->
-                        <a class="nav-link" href="{{ url('keranjang') }}"><i class="bi bi-handbag-fill" style="font-size: 20px; color: #ffffff;"></i></i></a>
-                      </li>
-                    <li class="nav-item ml-2">
-                      <a class="nav-link" href="{{ url('profile') }}"><p>User10</p></a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
+            @include("component.nav_header")
           </div>
         </div>
     <!--END Navbar-->
@@ -65,13 +27,13 @@
           <div class="col-3">
             <div class="card">
               <button class="btn-bookas">
-              <a href="#" style="color: #FFFFFF;" ><i class="bi bi-person-circle"></i> Alvina Vania</a>
+              <a href="{{ url('/profile') }}" style="color: #FFFFFF;" ><i class="bi bi-person-circle"></i> {{ session("name") }}</a>
               </button>
               <a href="{{ url('/pesanan') }}" style="color: #212121;"><i class="bi bi-clipboard" ></i> Pesanan</a>
               <a href="{{ url('/produk') }}" style="color: #212121;"><i class="bi bi-journal" ></i> Produk</a>
               <a href="{{ url('/penjualan') }}" style="color: #212121;"><i class="bi bi-file-earmark-bar-graph" ></i> Penjualan</a>
               <a href="{{ url('/penghasilan') }}" style="color: #212121;"><i class="bi bi-cash-stack" ></i> Penghasilan</a>
-              <a href="#" style="color: #EA6941;"><i class="bi bi-box-arrow-right"></i> Keluar</a>
+              <a href="/logout" style="color: #EA6941;"><i class="bi bi-box-arrow-right"></i> Keluar</a>
             </div>
           </div>
 
@@ -79,41 +41,34 @@
             <div class="card">
               <div class="card-cont">
                   <h1>Profil Saya</h1>
-                  <h5>Kelola Profilemu!<h5>
+                  <h5>Lengkapi Data Dirimu!<h5>
                   <div class="dropdown-divider"></div>
                   <form>
                     <div class="form-group row">
-                      <label for="staticEmail" class="col-sm-2 col-form-label">Username</label>
-                      <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="alvinakrn">
-                      </div>
-                    </div>
-                    <div class="form-group row">
                       <label for="inputPassword" class="col-sm-2 col-form-label">Email</label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{$user->email}}">
                       </div>
                     </div>
                     <div class="form-group row">
                       <label for="inputPassword" class="col-sm-2 col-form-label">Nama</label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputNama" placeholder="Nama">
+                      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{$user->name}}">
                       </div>
                     </div>
                     <div class="form-group row">
                       <label for="inputPassword" class="col-sm-2 col-form-label">No. Telp</label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputNoTelp" placeholder="Nomer">
+                      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{$user->phone}}">
                       </div>
                     </div>
                     <div class="form-group row">
                       <label for="inputPassword" class="col-sm-2 col-form-label">Alamat</label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputAlamat" placeholder="Alamat">
+                      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{$user->address}}">
                       </div>
                     </div>
                   </form>
-                  <button type="submit" class="btn btn-bookas"> <p>Simpan</p></button>
                 </div>
             </div>
             <!-- END Profilesaya -->
@@ -126,30 +81,24 @@
                             <div class="form-group row">
                               <label for="inputPassword" class="col-sm-2 col-form-label">Nama Bank</label>
                               <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputBank" placeholder="Bank">
+                              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{$rekening->namaBank}}">
                               </div>
                             </div>
                             <div class="form-group row">
                               <label for="inputPassword" class="col-sm-2 col-form-label">No. Rekening</label>
                               <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputNoRek" placeholder="Nomor">
-                              </div>
-                            </div>
-                            <div class="form-group row">
-                              <label for="inputPassword" class="col-sm-2 col-form-label">Nama</label>
-                              <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputNama" placeholder="Nama">
+                              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{$rekening->noRekening}}">
                               </div>
                             </div>
                           </form>
-                      <button type="submit" class="btn btn-bookas">Simpan</button>
                     </div>
                   </div>
               </div>
+              <a href="{{ url('/edit-profile') }}" class="btn btn-bookas mt-3">Edit Profile</a>
           </div>
         </div>
       </div>
-    </div>    
+    </div>
   <!-- END MIDCONTENT -->
 
 
@@ -192,6 +141,6 @@
     <script src="https://kit.fontawesome.com/9923874ec2.js " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous ">
     </script>
-    
+
 </footer>
 

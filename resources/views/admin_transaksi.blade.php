@@ -10,28 +10,23 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <link rel="stylesheet" href="css/admin.css">
-    
+
     </head>
 
 <body>
   <div class="container-fluid">
     <div class="container-navbar">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#"><img class="logo" src="img/Logo.png" alt=""><span class="ml-2">BOOKAS</span></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </nav>
+        @include("component.nav_header")
       </div>
     </div>
     <!--END Navbar-->
     <div class="sidenav">
         <h2 class="text-center" style="">Halo Admin!</h2>
-        <h2 class="text-center" style="color: #F4BD5C;">Alvina</h2>
-        <a href="#contact" ><i class="bi bi-people-fill"></i>User</a>
-        <a href="#services" class="active"><i class="bi bi-handbag-fill"></i>Transaksi</a>
-        <a href="#contact" ><i class="bi bi-credit-card-2-back-fill"></i>Penarikan</a>
-        <button class="btn"><i class="bi bi-box-arrow-left"></i>Keluar</button>
+        <h2 class="text-center" style="color: #F4BD5C;">{{ session("name") }}</h2>
+        <a href="/admin-pengguna" ><i class="bi bi-people-fill"></i>User</a>
+        <a href="/admin-transaksi" class="active"><i class="bi bi-handbag-fill"></i>Transaksi</a>
+        <a href="/admin-penarikan" ><i class="bi bi-credit-card-2-back-fill"></i>Penarikan</a>
+        <a style="float: left" href="/logout" class="btn"><i class="bi bi-box-arrow-left"></i>Keluar</a>
     </div>
     <!--END sidebar-->
 
@@ -155,13 +150,13 @@
                                         </tr>
                                     </tbody>
                                 </table>
-    
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-    
+
         </div>
     </div>
 

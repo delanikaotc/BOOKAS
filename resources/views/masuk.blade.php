@@ -20,7 +20,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-          
+
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -40,22 +40,23 @@
             <div class="row">
                 <div class="col-5">
                     <div class="card">
-                        <form class="px-4 py-3">
+                        <form class="px-4 py-3" action="{{ $config["action"] }}" method="post">
+                            @csrf
                             <h1>Masuk</h1>
                             <section class="form-masuk">
                                 <div class="form-group">
                                     <label for="exampleDropdownFormEmail1">Email:</label>
-                                    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                                    <input type="email" name="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
                                   </div>
                                   <div class="form-group">
                                     <label for="exampleDropdownFormPassword1">Kata sandi:</label>
-                                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                                    <input type="password" name="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
                                   </div>
-                                <button href="{{ url('/home') }}" type="submit" class="btn btn-bookas"><p>Masuk</p></button>
+                                <input type="submit" class="btn btn-bookas" value="Masuk"/>
                                 <a class="dropdown-item" href="#"><p class="lupasandi">Lupa kata sandi?</p></a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ url('/daftar') }}"><p class="oren">Belum punya akun? Daftar</p></a>
-                            </section>   
+                            </section>
                         </form>
                     </div>
                 </div>

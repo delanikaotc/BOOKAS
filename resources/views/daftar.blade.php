@@ -39,25 +39,28 @@
             <div class="row">
                 <div class="col-5">
                     <div class="card">
-                        <form class="px-4 py-3">
+                        <form class="px-4 py-3" action="{{ $config['action'] }}" method="post">
+                            @csrf
                             <h1>Daftar</h1>
                             <section class="form-daftar">
+                                @include("alert.alert")
                                 <div class="form-group">
                                     <label for="exampleDropdownFormEmail1">Email:</label>
-                                    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                                    <input type="email" name="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
                                   </div>
                                   <div class="form-group">
                                       <label for="exampleDropdownFormEmail1">Nama:</label>
-                                      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="nama">
+                                      <input type="text" name="name" class="form-control" id="exampleDropdownFormEmail1" placeholder="nama">
                                     </div>
                                   <div class="form-group">
                                     <label for="exampleDropdownFormPassword1">Kata sandi:</label>
-                                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                                    <input type="password" name="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
                                   </div>
+                                <input type="hidden" name="role_id" value="2">
                                 <button href="{{ url('/home') }}" type="submit" class="btn btn-bookas"><p>Daftar</p></button>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ url('/masuk') }}"><p class="oren">Sudah punya akun? Masuk</p></a>
-                            </section>   
+                            </section>
                         </form>
                     </div>
                 </div>
