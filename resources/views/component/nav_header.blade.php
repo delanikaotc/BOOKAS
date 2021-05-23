@@ -6,8 +6,8 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <div class="search">
             <ul class="navbar-nav mr-auto">
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="form-inline my-2 my-lg-0" action="{{ url('/pencarian') }}" method="GET">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="cari">
                     <input class="btn btn-bookas my-2 my-sm-0" type="submit" value="">
                 </form>
             </ul>

@@ -16,28 +16,34 @@
     <div class="container-fluid">
         <div class="container-navbar">
             @include("component.nav_header")
-          </div>
         </div>
+    </div>
     <!--END Navbar-->
 
     <div class="section-topbar">
         <div class="container-navbar">
             <div class="row">
-              <ul class="navbar-nav ">
-                <li class="nav-item ml-4">
-                  <a class="nav-link" href="#"><p>Book</p></a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ">
-              <li class="nav-item ml-4">
-                <a class="nav-link" href="#"><p>Magazine</p></a>
-              </li>
-            </ul>
-            <ul class="navbar-nav ">
-              <li class="nav-item ml-4">
-                <a class="nav-link" href="#"><p>Brain Storming</p></a>
-              </li>
-          </ul>
+                <ul class="navbar-nav ">
+                    <li class="nav-item ml-4">
+                        <a class="nav-link" href="#">
+                            <p>Book</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ">
+                    <li class="nav-item ml-4">
+                        <a class="nav-link" href="#">
+                            <p>Magazine</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ">
+                    <li class="nav-item ml-4">
+                        <a class="nav-link" href="#">
+                            <p>Brain Storming</p>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -56,20 +62,20 @@
             <div class="row">
                 <div class="col-8">
                     <div class="card">
-                      <h1 class="oren">SERBA Rp. 40.000!</h1>
-                      <div class="section-carddalam">
-                        <div class="row">
-                            @foreach($datum['40000'] as $data)
+                        <h1 class="oren">SERBA Rp. 40.000!</h1>
+                        <div class="section-carddalam">
+                            <div class="row">
+                                @foreach($datum['40000'] as $data)
                                 <div class="col-2,5 ml-3">
                                     <div class="card">
-                                      <a href="{{ url('detail-buku/'.$data->id) }}"><img style="height: 100px;" src="storage/image/{{$data->image}}" alt=""></a>
-                                      <p class="book-title">{{ $data->name }}</p>
-                                      <p class="book-price">Rp. {{ $data->price }}</p>
+                                        <a href="{{ url('detail-buku/'.$data->id) }}"><img style="height: 100px;" src="storage/image/{{$data->image}}" alt=""></a>
+                                        <p class="book-title">{{ $data->name }}</p>
+                                        <p class="book-price">Rp. {{ $data->price }}</p>
                                     </div>
                                 </div>
-                            @endforeach
+                                @endforeach
+                            </div>
                         </div>
-                      </div>
                     </div>
                 </div>
                 <div class="col-4 ml-auto">
@@ -77,28 +83,30 @@
                 </div>
             </div>
         </div>
-      </div>
+    </div>
 
     <!--END content mid-->
 
     <section class="section-cardcontent">
-      <div class="container-navbar">
-        <h3>BUKU BEKAS</h3>
-        <div class="row">
-            @foreach($datum['all'] as $data)
+        <div class="container-navbar">
+            <h3>BUKU BEKAS</h3>
+            <div class="row">
+                @foreach($datum['all'] as $data)
                 <div class="col-2 pt-4">
-                    <div class="card" >
-                      <a href="{{ url('detail-buku/'.$data->id) }}"><img class="img" style="height: 180px; width: 100%" src="storage/image/{{$data->image}}" alt="" ></a>
-                      <div class="text-card">
-                          <p class="book-title">{{ $data->name }}</p>
-                          <p class="book-price">Rp. {{ $data->price }}</p>
-                      </div>
-                      <a href="/pembayaran" type="submit" class="btn btn-bookas"><p><i class="bi bi-bag-plus-fill"></i> Beli</p></a>
+                    <div class="card">
+                        <a href="{{ url('detail-buku/'.$data->id) }}"><img class="img" style="height: 180px; width: 100%" src="storage/image/{{$data->image}}" alt="" ></a>
+                        <div class="text-card">
+                            <p class="book-title">{{ $data->name }}</p>
+                            <p class="book-price">Rp. {{ $data->price }}</p>
+                        </div>
+                        <a href="/pembayaran" type="submit" class="btn btn-bookas">
+                            <p><i class="bi bi-bag-plus-fill"></i> Beli</p>
+                        </a>
                     </div>
                 </div>
-            @endforeach
+                @endforeach
+            </div>
         </div>
-      </div>
     </section>
     <!--END card conten-->
 
@@ -110,4 +118,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous ">
     </script>
 </body>
+
 </html>

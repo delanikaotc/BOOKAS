@@ -4,7 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,6 +39,7 @@ Route::group(['middleware' => ['admin_auth']], function () {
 
 Route::group(['middleware' => ['web_auth']], function () {
     Route::get('/home', [HomeController::class, "index"]);
+    Route::get('/pencarian', [SearchController::class, "index"]);
     Route::get('/detail-buku/{id}', [ProductController::class, "detail"]);
     Route::get('/keranjang', [CartController::class, "index"]);
 
