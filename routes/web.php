@@ -41,8 +41,11 @@ Route::group(['middleware' => ['web_auth']], function () {
     Route::get('/home', [HomeController::class, "index"]);
     Route::get('/detail-buku/{id}', [ProductController::class, "detail"]);
     Route::get('/keranjang', [CartController::class, "index"]);
+
     Route::get('/keranjang/add/{id}', [CartController::class, "addToCart"]);
-    Route::get('/pembayaran', function () {return view('pembayaran');});
+
+    Route::get('/pembayaran', 'App\Http\Controllers\TransaksiController@showpembayaran');
+
     Route::get('/bukti-transfer', function () {return view('infopembayaran');});
 
     Route::get('/profile', 'App\Http\Controllers\ProfileController@show')
@@ -59,7 +62,13 @@ Route::group(['middleware' => ['web_auth']], function () {
     Route::get('/produk', 'App\Http\Controllers\ProductController@show')
             ->name('showproduk');
 
-    Route::get('/edit-buku', function () {return view('produk_edit');});
+            
+    Route::get('/edit-buku/{id}',  'App\Http\Controllers\ProductController@showeditdetail')
+            ->name('showeditbuku');;
+    Route::patch('/editbuku/{id}',  'App\Http\Controllers\ProductController@editdetail')
+            ->name('editdetail');;
+    Route::delete('/delete-buku/{id}',  'App\Http\Controllers\ProductController@deleteproduk')
+            ->name('deleteproduk');;
 
     Route::get('/tambah-buku', function () { return view('produk_tambah');});
     Route::post('/input-produk', 'App\Http\Controllers\ProductController@inputdetail')

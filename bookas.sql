@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2021 at 05:51 PM
+-- Generation Time: May 23, 2021 at 01:43 PM
 -- Server version: 8.0.22
 -- PHP Version: 7.1.33
 
@@ -66,9 +66,9 @@ INSERT INTO `product` (`id`, `name`, `price`, `created_at`, `updated_at`, `image
 (3, 'Lingsir Wengi', '54000', '2021-05-18 07:10:01', '2021-05-18 07:10:03', 'buku1.png', '2021-05-18', 'Gramedia', 'Penelusuran sebuah kompleks perumahan tua terbengkalai di daerah Jakarta Timur malam itu awalnya berjalan menyenangkan. Sebelum masuk ke area kompleks, saya bersama Wisnu, Fadi, dan Demian membuka vlog dengan gimmick seru untuk mencairkan suasana. Namun, saat tiba di sebuah lokasi rumah tingkat yang dikelilingi pepohonan dan semak, saya melihat semakin banyak makhluk tak kasatmata yang membuat saya terkejut.', 'Menurut aku buku ini bagus banget! Bukunya di cover, ga ada sobek sama sekali. Baru dibaca sekali. Dijual karena emang ga pernah dibaca lagi:( Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru', 'Wijayanto', 0),
 (4, 'Bulan Bintang', '10000', '2021-05-18 07:13:16', '2021-05-18 07:13:18', 'buku3.png', '2021-05-18', 'Gramedia', 'Penelusuran sebuah kompleks perumahan tua terbengkalai di daerah Jakarta Timur malam itu awalnya berjalan menyenangkan. Sebelum masuk ke area kompleks, saya bersama Wisnu, Fadi, dan Demian membuka vlog dengan gimmick seru untuk mencairkan suasana. Namun, saat tiba di sebuah lokasi rumah tingkat yang dikelilingi pepohonan dan semak, saya melihat semakin banyak makhluk tak kasatmata yang membuat saya terkejut.', 'Menurut aku buku ini bagus banget! Bukunya di cover, ga ada sobek sama sekali. Baru dibaca sekali. Dijual karena emang ga pernah dibaca lagi:( Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru', 'Suko Wijayanto', 0),
 (5, 'Wangsit', '14500', '2021-05-18 07:14:32', '2021-05-18 07:14:34', 'buku4.png', '2021-05-18', 'ramedia', 'Penelusuran sebuah kompleks perumahan tua terbengkalai di daerah Jakarta Timur malam itu awalnya berjalan menyenangkan. Sebelum masuk ke area kompleks, saya bersama Wisnu, Fadi, dan Demian membuka vlog dengan gimmick seru untuk mencairkan suasana. Namun, saat tiba di sebuah lokasi rumah tingkat yang dikelilingi pepohonan dan semak, saya melihat semakin banyak makhluk tak kasatmata yang membuat saya terkejut.', 'Menurut aku buku ini bagus banget! Bukunya di cover, ga ada sobek sama sekali. Baru dibaca sekali. Dijual karena emang ga pernah dibaca lagi:( Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru', 'Sarah Widodo', 0),
-(6, 'bukuku', '10000', '2021-05-19 06:40:49', '2021-05-19 06:40:49', '1621431649_buku5.png', '17 agustus', NULL, 'nuasn', 'nuans', 'nuansa', 5),
-(7, 'bukuku', '10000', '2021-05-19 06:41:55', '2021-05-19 06:41:55', '1621431715_buku5.png', '17 agustus', NULL, 'nuasn', 'nuans', 'nuansa', 5),
-(8, 'bukuku', '10000', '2021-05-19 06:43:40', '2021-05-19 06:43:40', '1621431820_buku5.png', '17 agustus', 'nuasn', 'nuasn', 'nuans', 'nuansa', 5);
+(7, 'bukuku', '10000', '2021-05-19 06:41:55', '2021-05-22 09:35:30', '1621701330_buku3.png', '17 agustus', 'mayang', 'nuasn', 'nuans', 'nuansa', 5),
+(9, 'menari', '40000', '2021-05-19 20:23:30', '2021-05-19 20:23:30', '1621481010_buku1.png', '18 Maret 2020', 'mayang', 'menari adalah dia dia adalah menari, tapikita tidak pernah menari', 'masih bagus banget sebenernya, cuma aku udah lama banget ga baca jadi ya yaudah deh aku jual', 'nusa dua', 6),
+(10, 'bernyanyi', '40000', '2021-05-19 20:31:16', '2021-05-19 20:31:16', '1621481476_buku4.png', '18 Maret 2020', 'mayang', 'nuasn', 'masih bagus banget sebenernya, cuma aku udah lama banget ga baca jadi ya yaudah deh aku jual', 'nuansa', 6);
 
 -- --------------------------------------------------------
 
@@ -90,7 +90,10 @@ CREATE TABLE `rekening` (
 --
 
 INSERT INTO `rekening` (`id`, `iduser`, `namaBank`, `noRekening`, `created_at`, `updated_at`) VALUES
-(1, 5, 'bni', 17148, '2021-05-19 09:25:10', '2021-05-19 09:25:10');
+(1, 5, 'bni', 17148, '2021-05-19 09:25:10', '2021-05-19 09:25:10'),
+(2, 6, 'bca', 17171717, '2021-05-19 20:20:56', '2021-05-19 20:20:56'),
+(3, 7, 'bca', 17148, '2021-05-22 10:51:57', '2021-05-22 10:51:57'),
+(4, 7, 'bni', 17148, '2021-05-22 10:52:53', '2021-05-22 10:52:53');
 
 -- --------------------------------------------------------
 
@@ -137,7 +140,9 @@ INSERT INTO `user` (`id`, `name`, `email`, `password`, `created_at`, `updated_at
 (1, 'sukopay', 'voodoomodoo@gmail.com', '$2y$12$4ikr5JPN1zdd21.dY/0K/ubUV54Avw6ZpC4zvtULnqn6PMh9gLp2e', '2021-05-17 22:09:20', '2021-05-17 22:09:20', NULL, NULL, 1),
 (3, 'sdfsd', 'fahrursanjaya@gmail.com', '$2y$12$DUXcmZNsplVYS0bWac4rFeR4olmKbBPX6jTYu87Hq2ri73yfxRbD.', '2021-05-18 06:03:25', '2021-05-18 06:03:25', NULL, NULL, 2),
 (4, 'Alvina Vania', 'alvina@admin.com', '$2y$12$pOePKRINkI8yXQljhve.LOP3qCLsm6wV8G/VZlZHaDSz974NnJ3RW', '2021-05-18 19:12:43', '2021-05-18 19:12:43', NULL, NULL, 1),
-(5, 'alvina', 'alvina@user.com', '$2y$12$U.LDjKbgmGC/htGEpoDU9ef6Q.P7ZF50cPjf9fkWsGZ/Fmh8n.VEu', '2021-05-18 23:50:10', '2021-05-19 10:36:14', '444444', 'jl. delta barat', 2);
+(5, 'alvina', 'alvina@user.com', '$2y$12$U.LDjKbgmGC/htGEpoDU9ef6Q.P7ZF50cPjf9fkWsGZ/Fmh8n.VEu', '2021-05-18 23:50:10', '2021-05-19 10:36:14', '444444', 'jl. delta barat', 2),
+(6, 'alvina', 'alvina@alvina.com', '$2y$12$Z2SZhLkL6sN0ZTHdS06I6.1QRJcgT40GZAJwnXjRuL1d8fyTPPo.m', '2021-05-19 20:09:54', '2021-05-19 20:20:50', '444444', 'jalan mangga', 2),
+(7, 'alvina', 'alvinabaru@user.com', '$2y$12$PjMw6Yll.VqQxyTeQBPoeeJIBrXyRtxlHZG4e1a1CcZlvB3POt54i', '2021-05-22 10:46:13', '2021-05-22 10:51:49', '4444433', 'jalan mangga', 2);
 
 --
 -- Indexes for dumped tables
@@ -187,13 +192,13 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `rekening`
 --
 ALTER TABLE `rekening`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `role`
@@ -205,7 +210,7 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

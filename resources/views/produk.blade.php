@@ -52,7 +52,7 @@
 
                     <div class="section-myitem">
                         <div class="row">
-                        @foreach($items as $item)
+                            @foreach($items as $item)
                             <div class="col-2,9">
                                 <div class="card">
                                     <a href="{{ url('detail-buku') }}"><img src="storage/image/{{$item->image}}" alt=""></a>
@@ -61,12 +61,17 @@
                                         <p class="book-price">Rp. {{$item->price}}</p>
                                     </div>
                                     <div class="row">
-                                        <a href="{{ url('edit-buku') }}" class="btn btn-edit">
+                                        <a href="{{ url('edit-buku') }}/{{$item->id}}" class="btn btn-edit">
                                             <p> Edit</p>
                                         </a>
-                                        <button type="submit" class="btn btn-hapus">
-                                            <p> Hapus</p>
-                                        </button>
+                                        
+                                        <form action="/delete-buku/{{$item->id}}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                            <button type="submit" class="btn btn-hapus">
+                                                <p> Hapus</p>
+                                            </button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

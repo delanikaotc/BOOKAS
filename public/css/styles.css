@@ -309,7 +309,7 @@ body {
   margin-left: 10px;
 }
 
-.section-cardcontent .card button {
+.section-cardcontent .card .btn-bookas {
   margin-top: 10px;
   margin-left: 80px;
 }

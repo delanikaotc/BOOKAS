@@ -24,7 +24,7 @@ class RekeningController extends Controller
             'noRekening' => $request->noRekening
         ];
         Rekening::create($data);
-        return redirect('/edit-profile');
+        return redirect('/profile');
     }
 
 }

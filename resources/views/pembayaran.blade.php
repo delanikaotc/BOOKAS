@@ -32,11 +32,10 @@
             <div class="row address-detail">
                 <div class="col-3">
                     <div>{{ session("name") }}</div>
-                    <div>082246680465</div>
+                    <div>{{ session("phone") }}</div>
                 </div>
                 <div class="col-8">
-                    <div>Jl. Adu Rayu 31 No. 99, Kel. Srikaya, Kec. Apel</div>
-                    <div>Jatiasih, Bekasi</div>
+                    <div>{{ session("address") }}</div>
                 </div>
             </div>
         </div>
@@ -68,6 +67,22 @@
                     <div class="label-subtotal">Rp9.000,00</div>
                 </div>
             </div> -->
+        </div>
+        <div class="container-cartitem">
+            <div class="row cartitem-top">
+                <div class="cartitem-top-avatar pt-2">Pilih Bank</div>
+            </div>
+            <hr class="hr1">
+            <div class="row cartitem-bottom ml-1" style="text-align: center;">
+                <div class="bank">
+                    <div class="bank-top"><img src="img/bni.png" alt="" class="bank-logo"></div>
+                    <div class="bank-bottom">0707070707 a/n BOOKAS</div>
+                </div>
+                <div class="bank">
+                    <div class="bank-top"><img src="img/bni.png" alt="" class="bank-logo"></div>
+                    <div class="bank-bottom">07007070707 a/n BOOKAS</div>
+                </div>
+            </div>
         </div>
         
         <div class="container-total">

@@ -25,6 +25,7 @@
             </div>
             <hr class="hr1">
             <div class="header-bottom">
+                <h1>TOTAL:</h1>
                 <div class="totalcart">Rp50.000,00</div>
             </div>
         </div>

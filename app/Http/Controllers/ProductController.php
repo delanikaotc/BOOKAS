@@ -27,14 +27,13 @@ class ProductController extends Controller
             'kondisi' => 'required',
             'penulis' => 'required'
         ]);
-        // menyimpan data file yang diupload ke variabel $file
-        
-            $file = $request->file('image');
 
-            $nama_file = time() . "_" . $file->getClientOriginalName();
-            // isi dengan nama folder tempat kemana file diupload
-            $tujuan_upload = 'storage/image';
-            $file->move($tujuan_upload, $nama_file);
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('image');
+        $nama_file = time() . "_" . $file->getClientOriginalName();
+        // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = 'storage/image';
+        $file->move($tujuan_upload, $nama_file);
 
         $data = [
             'name' => $request->name,
@@ -57,6 +56,56 @@ class ProductController extends Controller
         return view('produk', [
             'items'=>$items
         ]);
+    }
+
+
+    public function editdetail(Request $request, $id){
+        $request->validate([
+            'name' => 'required',
+            'price' => 'required',
+            'image' => 'file|image|mimes:jpeg,png,jpg',
+            'tgl_terbit' => 'required',
+            'penerbit' => 'required',
+            'deskripsi' => 'required',
+            'kondisi' => 'required',
+            'penulis' => 'required'
+        ]);
+
+        if($request->has('image')){
+            // menyimpan data file yang diupload ke variabel $file
+            $file = $request->file('image');
+            $nama_file = time() . "_" . $file->getClientOriginalName();
+            // isi dengan nama folder tempat kemana file diupload
+            $tujuan_upload = 'storage/image';
+            $file->move($tujuan_upload, $nama_file);
+        }else{
+            $nama_file=null;
+        }
+
+        $data = [
+            'name' => $request->name,
+            'price' => $request->price,
+            'image' => $nama_file,
+            'tgl_terbit' => $request->tgl_terbit,
+            'penerbit' => $request->penerbit,
+            'deskripsi' => $request->deskripsi,
+            'kondisi' => $request->kondisi,
+            'penulis' => $request->penulis,
+            'id_user' => $request->session()->get('id')
+        ];
+
+        Product::find($id)->update($data);
+        return redirect('/produk');
+    }
+
+    public function showeditdetail(Request $request,$id){
+        $product = Product::where('id', $request->id)->first();
+        return view("produk_edit", compact("product")); //compact->parsing
+    }
+
+    public function deleteproduk($id){
+        Product::where('id', $id)->delete();
+        return redirect('/produk');
     }
 
 

@@ -93,7 +93,7 @@
                           <p class="book-title">{{ $data->name }}</p>
                           <p class="book-price">Rp. {{ $data->price }}</p>
                       </div>
-                      <button type="submit" class="btn btn-bookas"><p><i class="bi bi-bag-plus-fill"></i> Beli</p></button>
+                      <a href="/pembayaran" type="submit" class="btn btn-bookas"><p><i class="bi bi-bag-plus-fill"></i> Beli</p></a>
                     </div>
                 </div>
             @endforeach
