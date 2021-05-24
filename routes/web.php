@@ -5,6 +5,9 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,7 +35,8 @@ Route::get('/', function (){ return redirect('/home');});
 Route::get('/logout', [UserController::class, "logout"]);
 
 Route::group(['middleware' => ['admin_auth']], function () {
-    Route::get('/admin-pengguna', function () {return view('admin_pengguna');});
+    Route::get('/admin-pengguna', [AdminController::class, "index"]);
+    Route::get('/admin-pengguna/delete/{id}', [AdminController::class, "destroy"]);
     Route::get('/admin-transaksi', function () {return view('admin_transaksi');});
     Route::get('/admin-penarikan', function () {return view('admin_penarikan');});
 });
