@@ -85,8 +85,9 @@
 
     <section class="section-cardcontent">
       <div class="container-navbar">
-        <h3>BUKU BEKAS</h3>
+        <h3>Hasil Pencarian</h3>
         <div class="row">
+            @if (count($datum['all']) > 0)
             @foreach($datum['all'] as $data)
                 <div class="col-3 pt-4">
                     <div class="card" >
@@ -102,6 +103,9 @@
                     </div>
                 </div>
             @endforeach
+            @else
+            <div class="not-found">Buku tidak ditemukan!</div>
+            @endif
         </div>
       </div>
     </section>

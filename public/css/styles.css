@@ -804,8 +804,13 @@ body {
     background-color: transparent, 100%;
 }
 
-.berhasil-hapus {
-    font-size: 24px;
+.not-found {
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: 750px;
+    margin-right: 135px;
+    font-size: 20px;
 }
 
 
