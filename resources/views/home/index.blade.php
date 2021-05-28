@@ -26,17 +26,17 @@
             <div class="row">
               <ul class="navbar-nav ">
                 <li class="nav-item ml-4">
-                  <a class="nav-link" href="#"><p>Book</p></a>
+                  <!-- <a class="nav-link" href="#"><p>Book</p></a> -->
                 </li>
             </ul>
             <ul class="navbar-nav ">
               <li class="nav-item ml-4">
-                <a class="nav-link" href="#"><p>Magazine</p></a>
+                <!-- <a class="nav-link" href="#"><p>Magazine</p></a> -->
               </li>
             </ul>
             <ul class="navbar-nav ">
               <li class="nav-item ml-4">
-                <a class="nav-link" href="#"><p>Brain Storming</p></a>
+                <!-- <a class="nav-link" href="#"><p>Brain Storming</p></a> -->
               </li>
           </ul>
             </div>

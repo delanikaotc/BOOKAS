@@ -25,12 +25,12 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item ml-4">
               <a class="nav-link" href="#">
-                <p>Tentang</p>
+                <!-- <p>Tentang</p> -->
               </a>
             </li>
             <li class="nav-item ml-2">
               <a class="nav-link" href="#">
-                <p>Hubungi Kami</p>
+                <!-- <p>Hubungi Kami</p> -->
               </a>
             </li>
           </ul>

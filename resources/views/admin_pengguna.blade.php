@@ -26,7 +26,7 @@
         <a href="{{ url('/admin-pengguna') }}" class="active"><i class="bi bi-people-fill"></i>User</a>
         <a href="{{ url('/admin-transaksi') }}"><i class="bi bi-handbag-fill"></i>Transaksi</a>
         <a href="{{ url('/admin-penarikan') }}" ><i class="bi bi-credit-card-2-back-fill"></i>Penarikan</a>
-        <a href="{{ url('/logout') }}" class="btn"><i class="bi bi-box-arrow-left"></i>Keluar</a>
+        <a style="float: left" href="{{ url('/logout') }}" class="btn"><i class="bi bi-box-arrow-left"></i>Keluar</a>
     </div>
     <!--END sidebar-->
 

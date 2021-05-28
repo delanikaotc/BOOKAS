@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item ml-2">
-                <a class="nav-link" href="{{ url('/profile') }}"><p>{{ session("name") }}</p></a>
+                <a><p>{{ session("name") }}</p></a>
             </li>
         </ul>
     </div>
