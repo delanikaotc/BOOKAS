@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/pengguna.css">
+    <link rel="stylesheet" href="{{ url('/css/pengguna.css') }}">
 
 </head>
 
@@ -32,7 +32,7 @@
                         </button>
                         <a href="{{ url('/penjualan') }}" style="color: #212121;"><i class="bi bi-file-earmark-bar-graph"></i> Penjualan</a>
                         <a href="{{ url('/penghasilan') }}" style="color: #212121;"><i class="bi bi-cash-stack"></i> Penghasilan</a>
-                        <a href="#" style="color: #EA6941;"><i class="bi bi-box-arrow-right"></i> Keluar</a>
+                        <a href="{{ url('/logout') }}" style="color: #EA6941;"><i class="bi bi-box-arrow-right"></i> Keluar</a>
                     </div>
                 </div>
                 <!-- END sidebar -->
@@ -52,26 +52,23 @@
 
                     <div class="section-myitem">
                         <div class="row">
-                            @foreach($items as $item)
-                            <div class="col-2,9">
+                        @foreach($items as $item)
+                            <div class="col-4">
                                 <div class="card">
-                                    <a href="{{ url('detail-buku') }}"><img src="storage/image/{{$item->image}}" alt=""></a>
+                                    <a href="detail-buku/{{$item->id}}"><img src="storage/image/{{$item->image}}" alt="" style="height: 180px; width:100%"></a>
                                     <div class="text-card">
                                         <p class="book-title">{{$item->name}}</p>
-                                        <p class="book-price">Rp. {{$item->price}}</p>
+                                        <p class="book-price">Rp. {{ number_format($item->price,0,",",".") }}</p>
                                     </div>
-                                    <div class="row">
-                                        <a href="{{ url('edit-buku') }}/{{$item->id}}" class="btn btn-edit">
-                                            <p> Edit</p>
-                                        </a>
-                                        
-                                        <form action="/delete-buku/{{$item->id}}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                            <button type="submit" class="btn btn-hapus">
-                                                <p> Hapus</p>
-                                            </button>
-                                        </form>
+                                    <div class="">
+                                        <center>
+                                          <a href="edit-buku/{{$item->id}}" class="btn btn-edit">
+                                              <p> Edit</p>
+                                          </a>
+                                          <a href="delete-buku/{{$item->id}}" onclick="return confirm('Anda Yakin?');" class="btn btn-hapus">
+                                              <p> Hapus</p>
+                                          </a>
+                                        </center>
                                     </div>
                                 </div>
                             </div>

@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/pengguna.css">
+  <link rel="stylesheet" href="{{ url('/css/pengguna.css') }}">
 
 </head>
 
@@ -33,7 +33,7 @@
             <a href="{{ url('/produk') }}" style="color: #212121;"><i class="bi bi-journal"></i> Produk</a>
             <a href="{{ url('/penjualan') }}" style="color: #212121;"><i class="bi bi-file-earmark-bar-graph"></i> Penjualan</a>
             <a href="{{ url('/penghasilan') }}" style="color: #212121;"><i class="bi bi-cash-stack"></i> Penghasilan</a>
-            <a href="/logout" style="color: #EA6941;"><i class="bi bi-box-arrow-right"></i> Keluar</a>
+            <a href="{{ url('/logout') }}" style="color: #EA6941;"><i class="bi bi-box-arrow-right"></i> Keluar</a>
           </div>
         </div>
 
@@ -48,13 +48,13 @@
                     <div class="form-group row">
                       <label for="inputPassword" class="col-sm-2 col-form-label">No. Telp</label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputNoTelp" placeholder="Nomer" name="phone">
+                        <input type="text" class="form-control" id="inputNoTelp" placeholder="Nomer" name="phone" value="{{$user->phone}}">
                       </div>
                     </div>
                     <div class="form-group row">
                       <label for="inputPassword" class="col-sm-2 col-form-label">Alamat</label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputAlamat" placeholder="Alamat" name="address">
+                        <input type="text" class="form-control" id="inputAlamat" placeholder="Alamat" name="address" value="{{$user->address}}">
                       </div>
                     </div>
                     <button type="submit" class="btn btn-bookas">
@@ -69,18 +69,18 @@
               <div class="card-cont">
                 <h1>Rekening Saya</h1>
                 <div class="dropdown-divider"></div>
-                <form class="form-input-hasil" action="{{ route('inputrekening')}}" method="POST">
+                <form class="form-input-hasil" action="{{ route('updaterekening', $id )}}" method="POST">
                   @csrf
                   <div class="form-group row">
                     <label for="inputPassword" class="col-sm-2 col-form-label">Nama Bank</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputBank" placeholder="Bank" name="namaBank">
+                      <input type="text" class="form-control" id="inputBank" placeholder="Bank" name="namaBank" value="{{$rekening->namaBank}}">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="inputPassword" class="col-sm-2 col-form-label">No. Rekening</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputNoRek" placeholder="Nomor" name="noRekening">
+                      <input type="text" class="form-control" id="inputNoRek" placeholder="Nomor" name="noRekening" value="{{$rekening->noRekening}}">
                     </div>
                   </div>
                   <button type="submit" class="btn btn-bookas">Simpan</button>

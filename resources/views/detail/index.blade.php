@@ -1,3 +1,4 @@
+<?php $id_user = session()->get('id'); ?>
 <html lang="en">
 
 <head>
@@ -9,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="{{ url('/css/styles.css') }}">
 
 </head>
 
@@ -26,8 +27,8 @@
             <div class="row">
                 <div class="col-3">
                     <div class="card">
-                        <div class="book-image">
-                            <img style="width: 100%" class="img img-responsive" src="/storage/image/{{$product->image}}" alt="">
+                        <div class="book-image" style="height:100%">
+                            <img style="width: 100%" class="img img-responsive" src="{{ url('/storage/image') }}/{{$product->image}}" alt="">
                         </div>
                     </div>
                 </div>
@@ -43,13 +44,16 @@
                 </div>
                 <div class="col-3">
                     <div class="card">
-                        <div class="cardbeli">
+                        <div class="cardbeli" style="height: 100%;">
                             <div class="content">
                                 <h4>Harga:</h4>
-                                <h2>Rp. {{ $product->price }}</h2>
+                                <h2>Rp. {{ number_format($product->price, 0, ",",".") }}</h2>
                             </div>
-                            <a href="/pembayaran" style="width: 80%; margin: 0px 24px;" class="btn btn-bookas"><p>Beli Sekarang</p></a>
-                            <a href="/keranjang/add/{{$product->id}}" style="width: 80%; margin: 8px 24px;" class="btn btn-keranjang"><p>Tambah Ke Keranjang +</p></a>
+                            @if ( $id_user != $product->id_user )
+                            <a href="{{ url('/pembayaran') }}/{{$product->id}}" style="width: 80%; margin: 0px 24px;" class="btn btn-bookas"><p>Beli Sekarang</p></a>
+                            <a href="{{ url('/keranjang/add') }}/{{$product->id}}" style="width: 80%; margin: 8px 24px;" class="btn btn-keranjang"><p>Tambah Ke Keranjang +</p></a>
+                            @endif
+                            <br>
                         </div>
                     </div>
                 </div>
@@ -84,6 +88,8 @@
             </div>
         </div>
     </div>
+    <br>
+    <br>
     <!--END MidContent-->
 {{--@include("component.nav_footer")--}}
     <!-- jQuery and JS bundle w/ Popper.js -->

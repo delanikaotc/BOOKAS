@@ -9,24 +9,24 @@
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/admin.css">
+        <link rel="stylesheet" href="{{ url('/css/admin.css') }}">
 
     </head>
 
 <body>
   <div class="container-fluid">
     <div class="container-navbar">
-        @include("component.nav_header")
+        @include("component.nav_headeradmin")
       </div>
     </div>
     <!--END Navbar-->
     <div class="sidenav">
         <h2 class="text-center" style="">Halo Admin!</h2>
         <h2 class="text-center" style="color: #F4BD5C;">{{ session("name") }}</h2>
-        <a href="/admin-pengguna" class="active"><i class="bi bi-people-fill"></i>User</a>
-        <a href="/admin-transaksi"><i class="bi bi-handbag-fill"></i>Transaksi</a>
-        <a href="/admin-penarikan" ><i class="bi bi-credit-card-2-back-fill"></i>Penarikan</a>
-        <a href="logout" class="btn"><i class="bi bi-box-arrow-left"></i>Keluar</a>
+        <a href="{{ url('/admin-pengguna') }}" class="active"><i class="bi bi-people-fill"></i>User</a>
+        <a href="{{ url('/admin-transaksi') }}"><i class="bi bi-handbag-fill"></i>Transaksi</a>
+        <a href="{{ url('/admin-penarikan') }}" ><i class="bi bi-credit-card-2-back-fill"></i>Penarikan</a>
+        <a href="{{ url('/logout') }}" class="btn"><i class="bi bi-box-arrow-left"></i>Keluar</a>
     </div>
     <!--END sidebar-->
 
@@ -41,39 +41,82 @@
                                 <table class="table m-0">
                                     <thead>
                                         <tr>
-                                            <th scope="col">ID. User</th>
+                                            <th scope="col">No. User</th>
                                             <th scope="col">No. Role</th>
                                             <th scope="col">Email</th>
                                             <th scope="col">Nama</th>
-                                            {{-- <th scope="col">Penghasilan</th>
-                                            <th scope="col">Buku Terjual</th> --}}
-                                            {{-- <th scope="col">Edit</th> --}}
+                                            <th scope="col">Penghasilan</th>
+                                            <th scope="col">Buku Terjual</th>
+                                            <th scope="col">Edit</th>
                                             <th scope="col">Delete</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($users as $user )
                                         <tr>
-                                            {{-- <th scope="row">{{ ++i }}</th> --}}
-                                            <td>{{ $user->id }}</td>
-                                            <td>{{ $user->role_id }}</td>
-                                            <td>{{ $user->email }}</td>
-                                            <td>{{ $user->name }}</td>
-                                            {{-- <td>Rp. 2.000.000</td> --}}
-                                            {{-- <td>50</td> --}}
-                                            {{-- <td>
+                                            <th scope="row">1</th>
+                                            <td>1</td>
+                                            <td>Otto@gmail.com</td>
+                                            <td>Otto</td>
+                                            <td>Rp. 2.000.000</td>
+                                            <td>50</td>
+                                            <td>
                                                 <button class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-                                            </td> --}}
-                                            <td><a href="admin-pengguna/delete/{{ $user->id }}" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-danger" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+                                            </td>
                                         </tr>
-                                        @endforeach
-                                    </tbody> 
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>1</td>
+                                            <td>Jacob@gmail.com</td>
+                                            <td>Thornton</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>
+                                                <button class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-danger" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>2</td>
+                                            <td>Larry@gmail.com</td>
+                                            <td>Bird</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>
+                                                <button class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-danger" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>1</td>
+                                            <td>Martin@gmail.com</td>
+                                            <td>Williams</td>
+                                            <td>Rp. 150.000</td>
+                                            <td>2</td>
+                                            <td>
+                                                <button class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-danger" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
                                 </table>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 

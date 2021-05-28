@@ -86,8 +86,8 @@
                 </div>
                 <div class="form-group row">
                   <label for="tgl_terbit" class="col-sm-2 col-form-label">Tanggal Terbit</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputTahunTerbit" name="tgl_terbit">
+                  <div class="col-sm-4">
+                    <input type="date" class="form-control" id="inputTahunTerbit" name="tgl_terbit">
                   </div>
                 </div>
                 <div class="form-group row">
@@ -102,7 +102,10 @@
                     <input type="file" name="image">
                   </div>
                 </div>
-                <button type="submit" class="btn btn-bookas">
+                <a href="/produk" class="btn btn-warning text-white">
+                  <b>Kembali</b>
+                </a>
+                <button type="submit" class="btn btn-bookas float-right">
                   <p>Simpan</p>
                 </button>
               </form>
@@ -157,5 +160,27 @@
       <script src="https://kit.fontawesome.com/9923874ec2.js " crossorigin="anonymous "></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous ">
       </script>
+      <script type="text/javascript">
+      $( "[name='price']" ).keyup(function() {
+        $( "[name='price']" ).val(formatRupiah($( "[name='price']" ).val(),'Rp. '));
+      });
 
+      /* Fungsi */
+      function formatRupiah(angka, prefix)
+      {
+        var number_string = angka.replace(/[^,\d]/g, '').toString(),
+          split	= number_string.split(','),
+          sisa 	= split[0].length % 3,
+          rupiah 	= split[0].substr(0, sisa),
+          ribuan 	= split[0].substr(sisa).match(/\d{3}/gi);
+
+        if (ribuan) {
+          separator = sisa ? '.' : '';
+          rupiah += separator + ribuan.join('.');
+        }
+
+        rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+        return prefix == undefined ? rupiah : (rupiah ? prefix + rupiah : '');
+      }
+      </script>
     </footer>

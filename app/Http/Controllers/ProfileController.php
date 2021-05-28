@@ -15,18 +15,33 @@ class ProfileController extends Controller
 {
 
     public function show(Request $request){
-        $rekening=Rekening::where('iduser', $request->session()->get('id'))->first();
+        $id  = $request->session()->get('id');
+        $rekening = Rekening::where('iduser', $id)->first();
+        if (empty($rekening)) {
+          $data= [
+              'iduser' => $id,
+              'namaBank' => '',
+              'noRekening' => ''
+          ];
+          Rekening::create($data);
+          $rekening = Rekening::where('iduser', $id)->first();
+        }
         $user=User::where('id',$request->session()->get('id'))->first();
         return view('profile', [
             'rekening'=>$rekening,
             'user'=>$user
         ]);
+
     }
 
     public function showedit(Request $request){
         $id=$request->session()->get('id');
+        $rekening = Rekening::where('iduser', $id)->first();
+        $user = User::where('id', $id)->first();
         return view('profile_edit', [
-            'id'=>$id
+            'id'=>$id,
+            'rekening'=>$rekening,
+            'user'=>$user
         ]);
     }
 
@@ -37,7 +52,7 @@ class ProfileController extends Controller
             'phone' => 'required',
             'address' => 'required'
         ]);
-        
+
         $data = [
             'phone' => $request->phone,
             'address' => $request->address,
