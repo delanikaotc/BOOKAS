@@ -29,47 +29,51 @@
             </div>
             <div class="row address-detail">
                 <div class="col-3">
-                    <div>{{ session("name") }}</div>
-                    <div>082246680465</div>
+                    <div>{{ $user->name }}</div>
+                    <div>{{ $user->phone }}</div>
                 </div>
                 <div class="col-8">
-                    <div>Jl. Adu Rayu 31 No. 99, Kel. Srikaya, Kec. Apel</div>
-                    <div>Jatiasih, Bekasi</div>
+                    <div>{{ $user->address }}</div>
+                    <div></div>
                 </div>
             </div>
         </div>
     @include("alert.alert")
+    <?php $total_price = 0; ?>
     @foreach($items as $row)
         <div class="container-cartitem">
             <div class="row cartitem-top">
                 <div class="cartitem-top-avatar"><img src="img/avatar.png" alt="" class="avatar-cartitem"></div>
-                <div class="cartitem-top-nameAcc">Tika Store</div>
+                <div class="cartitem-top-nameAcc">{{ $row->nama_penjual }}</div>
             </div>
             <hr class="hr1">
             <div class="row cartitem-bottom">
-                <div class="col-2"><img src="{{ $row->associatedModel->image_url }}" alt="" class="bookcover-cartitem"></div>
+                <div class="col-2"><img src="storage/image/{{ $row->image }}" alt="" class="bookcover-cartitem"></div>
                 <div class="col-6 book-cartitem">
                     <div class="booktitle-cartitem">{{ $row->name }}</div>
-                    <div class="booktitle-cartitem">Qty : {{ $row->quantity }}</div>
-                    <div class="caption-cartitem">Good condition, dijual karena BU</div>
+                    <div class="booktitle-cartitem">Qty : {{ $row->qty }}</div>
+                    <div class="caption-cartitem">{{ $row->deskripsi }}</div>
                 </div>
-                <div class="col-2 price-cartitem">Rp{{ $row->price }}</div>
+                <div class="col-2 price-cartitem">Rp. {{ number_format($row->price, 0,",",".") }}</div>
                 <div class="col-2 delete-cartitem">
-                    <button class="btn btn-delete">Hapus</button>
+                    <a href="keranjang/delete/{{ $row->id }}" onclick="return confirm('Anda yakin?')" class="btn btn-delete">Hapus</a>
                 </div>
             </div>
         </div>
+        <?php $total_price += $row->price*$row->qty; ?>
     @endforeach
         <div class="container-total">
             <div class="row container-total-top">
                 <div class="labeltotal">Total Pesanan:</div>
-                <div class="totalcart">Rp{{\Cart::getSubTotal()}}</div>
+                <div class="totalcart">Rp. {{ number_format($total_price, 0,",",".") }}</div>
             </div>
+            @if ($total_price > 0)
             <div class="container-total-bottom">
                 <a class="btn btn-bookas" href="{{ url('pembayaran') }}">
                     <p>Buat Pesanan</p>
                 </a>
             </div>
+            @endif
         </div>
     @include("component.nav_footer")
     </div>

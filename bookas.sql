@@ -1,218 +1,264 @@
--- phpMyAdmin SQL Dump
--- version 5.0.4
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: May 23, 2021 at 01:43 PM
--- Server version: 8.0.22
--- PHP Version: 7.1.33
+/*
+ Navicat Premium Data Transfer
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
+ Source Server         : LOCALHOST
+ Source Server Type    : MySQL
+ Source Server Version : 50719
+ Source Host           : localhost:3306
+ Source Schema         : bookas
 
+ Target Server Type    : MySQL
+ Target Server Version : 50719
+ File Encoding         : 65001
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+ Date: 27/05/2021 16:18:11
+*/
 
---
--- Database: `bookas`
---
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
 
--- --------------------------------------------------------
+-- ----------------------------
+-- Table structure for cart
+-- ----------------------------
+DROP TABLE IF EXISTS `cart`;
+CREATE TABLE `cart`  (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `id_pembeli` int(10) NULL DEFAULT NULL COMMENT 'id user pembeli dari tabel user.id',
+  `id_penjual` int(10) NULL DEFAULT NULL,
+  `id_product` int(10) NULL DEFAULT NULL,
+  `qty` double NULL DEFAULT 1,
+  `created_at` datetime(0) NULL DEFAULT NULL,
+  `updated_at` datetime(0) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 4 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = FIXED;
 
---
--- Table structure for table `category`
---
+-- ----------------------------
+-- Records of cart
+-- ----------------------------
 
-CREATE TABLE `category` (
-  `id` int NOT NULL,
-  `category` varchar(255) DEFAULT NULL,
-  `desc` varchar(255) DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- ----------------------------
+-- Table structure for category
+-- ----------------------------
+DROP TABLE IF EXISTS `category`;
+CREATE TABLE `category`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `category` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `desc` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `created_at` timestamp(0) NULL DEFAULT NULL,
+  `updated_at` timestamp(0) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
--- --------------------------------------------------------
+-- ----------------------------
+-- Records of category
+-- ----------------------------
 
---
--- Table structure for table `product`
---
+-- ----------------------------
+-- Table structure for order
+-- ----------------------------
+DROP TABLE IF EXISTS `order`;
+CREATE TABLE `order`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `no_transaksi` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `id_penjual` int(10) NULL DEFAULT NULL,
+  `id_pembeli` int(10) NULL DEFAULT NULL,
+  `id_product` int(10) NULL DEFAULT NULL,
+  `nama_penjual` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `nama_pembeli` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `price` double(10, 0) NULL DEFAULT 0,
+  `qty` double NULL DEFAULT 1,
+  `created_at` datetime(0) NULL DEFAULT NULL,
+  `updated_at` datetime(0) NULL DEFAULT NULL,
+  `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `tgl_terbit` date NULL DEFAULT NULL,
+  `penerbit` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `deskripsi` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+  `kondisi` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+  `penulis` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `status` int(1) NULL DEFAULT 0 COMMENT '0:proses pembayaran by pembeli, \r\n1:upload bukti pembayaran by pembeli, \r\n2:pembayaran diterima by admin, \r\n3:proses pengiriman by penjual, \r\n4:selesai by penjual',
+  `foto_bukti` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+  `tgl_bukti` datetime(0) NULL DEFAULT NULL,
+  `tgl_confirm_admin` datetime(0) NULL DEFAULT NULL,
+  `tgl_confirm_pengiriman` datetime(0) NULL DEFAULT NULL,
+  `tgl_confirm_selesai` datetime(0) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE `product` (
-  `id` int NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `price` decimal(10,0) DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
-  `tgl_terbit` varchar(255) DEFAULT NULL,
-  `penerbit` varchar(255) DEFAULT NULL,
-  `deskripsi` text CHARACTER SET utf8 COLLATE utf8_general_ci,
-  `kondisi` text CHARACTER SET utf8 COLLATE utf8_general_ci,
-  `penulis` varchar(255) DEFAULT NULL,
-  `id_user` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- ----------------------------
+-- Records of order
+-- ----------------------------
+INSERT INTO `order` VALUES (1, '16218543370', 4, 5, 3, 'anwar', 'anwar pembeli', 'af', 200000, 1, '2021-05-24 11:05:37', '2021-05-27 05:30:00', '1621784316_anwarsptr.jpg', '2021-05-24', 'sgsdfhr sdgsd', 'sg gssdgsd', 'sgds sdg', 'sdgsdv', 4, '1621864595_20170201_183147.png', '2021-05-24 13:56:35', '2021-05-26 14:27:01', '2021-05-26 07:28:21', '2021-05-27 05:30:00');
+INSERT INTO `order` VALUES (2, '16220683350', 4, 5, 2, 'anwar', 'anwar pembeli', 'a b c d', 150000, 2, '2021-05-27 05:32:15', '2021-05-27 05:34:22', '1621702084_logo-min.jpg', '2021-05-01', 'wsryrewtsx dfh', 'axzv sgbsdfrgesrd', 'reyrsd sgfsd', 'hehe', 4, '1622068353_default.jpg', '2021-05-27 05:32:33', '2021-05-27 05:34:08', '2021-05-27 05:34:12', '2021-05-27 05:34:22');
+INSERT INTO `order` VALUES (3, '16220691380', 4, 5, 3, 'anwar', 'anwar pembeli', 'af', 200000, 1, '2021-05-27 05:45:38', '2021-05-27 05:46:56', '1621784316_anwarsptr.jpg', '2021-05-24', 'sgsdfhr sdgsd', 'sg gssdgsd', 'sgds sdg', 'sdgsdv', 4, '1622069153_anwarsptr.jpg', '2021-05-27 05:45:53', '2021-05-27 05:46:32', '2021-05-27 05:46:48', '2021-05-27 05:46:56');
 
---
--- Dumping data for table `product`
---
+-- ----------------------------
+-- Table structure for order_detail
+-- ----------------------------
+DROP TABLE IF EXISTS `order_detail`;
+CREATE TABLE `order_detail`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `no_transaksi` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `id_penjual` int(10) NULL DEFAULT NULL,
+  `id_pembeli` int(10) NULL DEFAULT NULL,
+  `id_product` int(10) NULL DEFAULT NULL,
+  `nama_penjual` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `nama_pembeli` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `price` double(10, 0) NULL DEFAULT 0,
+  `qty` double NULL DEFAULT 1,
+  `created_at` datetime(0) NULL DEFAULT NULL,
+  `updated_at` datetime(0) NULL DEFAULT NULL,
+  `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `tgl_terbit` date NULL DEFAULT NULL,
+  `penerbit` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `deskripsi` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+  `kondisi` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+  `penulis` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `status` int(1) NULL DEFAULT 0 COMMENT '0:proses pembayaran by pembeli, 1:upload bukti pembayaran by pembeli, 2:pembayaran diterima by admin, 3:proses pengiriman by penjual, 4:selesai by penjual',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
-INSERT INTO `product` (`id`, `name`, `price`, `created_at`, `updated_at`, `image`, `tgl_terbit`, `penerbit`, `deskripsi`, `kondisi`, `penulis`, `id_user`) VALUES
-(1, 'Wingit', '50000', '2021-05-18 07:08:14', '2021-05-18 07:08:17', 'buku5.png', '2021-05-18', 'Gramedia', 'Penelusuran sebuah kompleks perumahan tua terbengkalai di daerah Jakarta Timur malam itu awalnya berjalan menyenangkan. Sebelum masuk ke area kompleks, saya bersama Wisnu, Fadi, dan Demian membuka vlog dengan gimmick seru untuk mencairkan suasana. Namun, saat tiba di sebuah lokasi rumah tingkat yang dikelilingi pepohonan dan semak, saya melihat semakin banyak makhluk tak kasatmata yang membuat saya terkejut.', 'Menurut aku buku ini bagus banget! Bukunya di cover, ga ada sobek sama sekali. Baru dibaca sekali. Dijual karena emang ga pernah dibaca lagi:( Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru', 'Sarah Wijayanto', 0),
-(2, 'Ini adalah tes', '150000', '2021-05-18 07:09:08', '2021-05-18 07:09:11', 'buku2.png', '2021-05-18', 'Gramedia', 'Penelusuran sebuah kompleks perumahan tua terbengkalai di daerah Jakarta Timur malam itu awalnya berjalan menyenangkan. Sebelum masuk ke area kompleks, saya bersama Wisnu, Fadi, dan Demian membuka vlog dengan gimmick seru untuk mencairkan suasana. Namun, saat tiba di sebuah lokasi rumah tingkat yang dikelilingi pepohonan dan semak, saya melihat semakin banyak makhluk tak kasatmata yang membuat saya terkejut.', 'Menurut aku buku ini bagus banget! Bukunya di cover, ga ada sobek sama sekali. Baru dibaca sekali. Dijual karena emang ga pernah dibaca lagi:( Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru', 'Sarah ', 0),
-(3, 'Lingsir Wengi', '54000', '2021-05-18 07:10:01', '2021-05-18 07:10:03', 'buku1.png', '2021-05-18', 'Gramedia', 'Penelusuran sebuah kompleks perumahan tua terbengkalai di daerah Jakarta Timur malam itu awalnya berjalan menyenangkan. Sebelum masuk ke area kompleks, saya bersama Wisnu, Fadi, dan Demian membuka vlog dengan gimmick seru untuk mencairkan suasana. Namun, saat tiba di sebuah lokasi rumah tingkat yang dikelilingi pepohonan dan semak, saya melihat semakin banyak makhluk tak kasatmata yang membuat saya terkejut.', 'Menurut aku buku ini bagus banget! Bukunya di cover, ga ada sobek sama sekali. Baru dibaca sekali. Dijual karena emang ga pernah dibaca lagi:( Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru', 'Wijayanto', 0),
-(4, 'Bulan Bintang', '10000', '2021-05-18 07:13:16', '2021-05-18 07:13:18', 'buku3.png', '2021-05-18', 'Gramedia', 'Penelusuran sebuah kompleks perumahan tua terbengkalai di daerah Jakarta Timur malam itu awalnya berjalan menyenangkan. Sebelum masuk ke area kompleks, saya bersama Wisnu, Fadi, dan Demian membuka vlog dengan gimmick seru untuk mencairkan suasana. Namun, saat tiba di sebuah lokasi rumah tingkat yang dikelilingi pepohonan dan semak, saya melihat semakin banyak makhluk tak kasatmata yang membuat saya terkejut.', 'Menurut aku buku ini bagus banget! Bukunya di cover, ga ada sobek sama sekali. Baru dibaca sekali. Dijual karena emang ga pernah dibaca lagi:( Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru', 'Suko Wijayanto', 0),
-(5, 'Wangsit', '14500', '2021-05-18 07:14:32', '2021-05-18 07:14:34', 'buku4.png', '2021-05-18', 'ramedia', 'Penelusuran sebuah kompleks perumahan tua terbengkalai di daerah Jakarta Timur malam itu awalnya berjalan menyenangkan. Sebelum masuk ke area kompleks, saya bersama Wisnu, Fadi, dan Demian membuka vlog dengan gimmick seru untuk mencairkan suasana. Namun, saat tiba di sebuah lokasi rumah tingkat yang dikelilingi pepohonan dan semak, saya melihat semakin banyak makhluk tak kasatmata yang membuat saya terkejut.', 'Menurut aku buku ini bagus banget! Bukunya di cover, ga ada sobek sama sekali. Baru dibaca sekali. Dijual karena emang ga pernah dibaca lagi:( Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru', 'Sarah Widodo', 0),
-(7, 'bukuku', '10000', '2021-05-19 06:41:55', '2021-05-22 09:35:30', '1621701330_buku3.png', '17 agustus', 'mayang', 'nuasn', 'nuans', 'nuansa', 5),
-(9, 'menari', '40000', '2021-05-19 20:23:30', '2021-05-19 20:23:30', '1621481010_buku1.png', '18 Maret 2020', 'mayang', 'menari adalah dia dia adalah menari, tapikita tidak pernah menari', 'masih bagus banget sebenernya, cuma aku udah lama banget ga baca jadi ya yaudah deh aku jual', 'nusa dua', 6),
-(10, 'bernyanyi', '40000', '2021-05-19 20:31:16', '2021-05-19 20:31:16', '1621481476_buku4.png', '18 Maret 2020', 'mayang', 'nuasn', 'masih bagus banget sebenernya, cuma aku udah lama banget ga baca jadi ya yaudah deh aku jual', 'nuansa', 6);
+-- ----------------------------
+-- Records of order_detail
+-- ----------------------------
 
--- --------------------------------------------------------
+-- ----------------------------
+-- Table structure for pencairan
+-- ----------------------------
+DROP TABLE IF EXISTS `pencairan`;
+CREATE TABLE `pencairan`  (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `id_user` int(10) NULL DEFAULT NULL,
+  `no_transaksi` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `total` double NULL DEFAULT 0,
+  `ket` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `status` int(1) NULL DEFAULT NULL COMMENT '0:pending, 1:selesai',
+  `tgl_confirm` datetime(0) NULL DEFAULT NULL,
+  `created_at` datetime(0) NULL DEFAULT NULL,
+  `updated_at` datetime(0) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
 
---
--- Table structure for table `rekening`
---
+-- ----------------------------
+-- Records of pencairan
+-- ----------------------------
+INSERT INTO `pencairan` VALUES (1, 4, 'P1622068215', 200000, 'Pencairan', 1, '2021-05-27 05:33:54', '2021-05-27 05:30:15', '2021-05-27 05:33:54');
+INSERT INTO `pencairan` VALUES (2, 4, 'P1622069223', 300000, 'Pencairan', 1, '2021-05-27 05:47:15', '2021-05-27 05:47:03', '2021-05-27 05:47:15');
 
-CREATE TABLE `rekening` (
-  `id` int NOT NULL,
-  `iduser` int NOT NULL,
-  `namaBank` varchar(255) NOT NULL,
-  `noRekening` int NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+-- ----------------------------
+-- Table structure for product
+-- ----------------------------
+DROP TABLE IF EXISTS `product`;
+CREATE TABLE `product`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(10) NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `price` double(10, 0) NULL DEFAULT 0,
+  `created_at` datetime(0) NULL DEFAULT NULL,
+  `updated_at` datetime(0) NULL DEFAULT NULL,
+  `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `tgl_terbit` date NULL DEFAULT NULL,
+  `penerbit` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `deskripsi` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+  `kondisi` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+  `penulis` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `upload_bukti` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `tgl_upload` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
---
--- Dumping data for table `rekening`
---
+-- ----------------------------
+-- Records of product
+-- ----------------------------
+INSERT INTO `product` VALUES (2, 4, 'a b c d', 150000, '2021-05-22 16:48:04', '2021-05-22 16:48:04', '1621702084_logo-min.jpg', '2021-05-01', 'wsryrewtsx dfh', 'axzv sgbsdfrgesrd', 'reyrsd sgfsd', 'hehe', NULL, NULL);
+INSERT INTO `product` VALUES (3, 4, 'af', 200000, '2021-05-23 15:38:36', '2021-05-23 15:38:36', '1621784316_anwarsptr.jpg', '2021-05-24', 'sgsdfhr sdgsd', 'sg gssdgsd', 'sgds sdg', 'sdgsdv', NULL, NULL);
 
-INSERT INTO `rekening` (`id`, `iduser`, `namaBank`, `noRekening`, `created_at`, `updated_at`) VALUES
-(1, 5, 'bni', 17148, '2021-05-19 09:25:10', '2021-05-19 09:25:10'),
-(2, 6, 'bca', 17171717, '2021-05-19 20:20:56', '2021-05-19 20:20:56'),
-(3, 7, 'bca', 17148, '2021-05-22 10:51:57', '2021-05-22 10:51:57'),
-(4, 7, 'bni', 17148, '2021-05-22 10:52:53', '2021-05-22 10:52:53');
+-- ----------------------------
+-- Table structure for rekening
+-- ----------------------------
+DROP TABLE IF EXISTS `rekening`;
+CREATE TABLE `rekening`  (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `iduser` int(10) NULL DEFAULT NULL,
+  `namaBank` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `noRekening` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `updated_at` datetime(0) NULL DEFAULT NULL,
+  `created_at` datetime(0) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
 
--- --------------------------------------------------------
+-- ----------------------------
+-- Records of rekening
+-- ----------------------------
+INSERT INTO `rekening` VALUES (1, 4, 'aa', 'bb', '2021-05-22 13:21:53', '2021-05-22 12:00:28');
+INSERT INTO `rekening` VALUES (2, 5, '', '', '2021-05-22 15:30:12', '2021-05-22 15:30:12');
 
---
--- Table structure for table `role`
---
+-- ----------------------------
+-- Table structure for role
+-- ----------------------------
+DROP TABLE IF EXISTS `role`;
+CREATE TABLE `role`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `role` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
-CREATE TABLE `role` (
-  `id` int NOT NULL,
-  `role` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- ----------------------------
+-- Records of role
+-- ----------------------------
+INSERT INTO `role` VALUES (1, 'Admin');
+INSERT INTO `role` VALUES (2, 'User');
 
---
--- Dumping data for table `role`
---
+-- ----------------------------
+-- Table structure for saldo
+-- ----------------------------
+DROP TABLE IF EXISTS `saldo`;
+CREATE TABLE `saldo`  (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `id_user` int(10) NULL DEFAULT NULL,
+  `no_transaksi` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `saldo_in` double NULL DEFAULT 0 COMMENT 'penghasilan',
+  `saldo_out` double NULL DEFAULT 0 COMMENT 'pencairan',
+  `qty` double NULL DEFAULT 0,
+  `ket` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `created_at` datetime(0) NULL DEFAULT NULL,
+  `updated_at` datetime(0) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 6 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
 
-INSERT INTO `role` (`id`, `role`) VALUES
-(1, 'Admin'),
-(2, 'User');
+-- ----------------------------
+-- Records of saldo
+-- ----------------------------
+INSERT INTO `saldo` VALUES (1, 4, '16218543370', 200000, 0, 1, 'Order', '2021-05-27 05:30:00', NULL);
+INSERT INTO `saldo` VALUES (2, 4, 'P1622068215', 0, 200000, 0, 'Pencairan', '2021-05-27 05:33:54', NULL);
+INSERT INTO `saldo` VALUES (3, 4, '16220683350', 300000, 0, 2, 'Order', '2021-05-27 05:34:22', NULL);
+INSERT INTO `saldo` VALUES (4, 4, '16220691380', 200000, 0, 1, 'Order', '2021-05-27 05:46:56', NULL);
+INSERT INTO `saldo` VALUES (5, 4, 'P1622069223', 0, 300000, 0, 'Pencairan', '2021-05-27 05:47:15', NULL);
 
--- --------------------------------------------------------
+-- ----------------------------
+-- Table structure for user
+-- ----------------------------
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `created_at` timestamp(0) NULL DEFAULT NULL,
+  `updated_at` timestamp(0) NULL DEFAULT NULL,
+  `phone` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `role_id` int(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
---
--- Table structure for table `user`
---
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES (1, 'sukopay', 'admin@gmail.com', '$2y$12$aYdE1marXkjUaIVRRa.hD.cCeE/r3XkqU4QQrf64r3VA7LS9YCenq', '2021-05-18 05:09:20', '2021-05-18 05:09:20', NULL, NULL, 1);
+INSERT INTO `user` VALUES (3, 'sdfsd', 'fahrursanjaya@gmail.com', '$2y$12$DUXcmZNsplVYS0bWac4rFeR4olmKbBPX6jTYu87Hq2ri73yfxRbD.', '2021-05-18 13:03:25', '2021-05-18 13:03:25', NULL, NULL, 2);
+INSERT INTO `user` VALUES (4, 'anwar', 'anwarsptr@gmail.com', '$2y$12$IWKWEIo.VsPa4sHVRvLtWu6oRCqXN.SKZHukmiwzoXIoIbaKfW1we', '2021-05-22 11:32:14', '2021-05-22 12:50:17', '11', '22', 2);
+INSERT INTO `user` VALUES (5, 'anwar pembeli', 'anwarsptr11@gmail.com', '$2y$12$aYdE1marXkjUaIVRRa.hD.cCeE/r3XkqU4QQrf64r3VA7LS9YCenq', '2021-05-22 15:30:01', '2021-05-23 15:52:07', '086346346', 'batam', 2);
 
-CREATE TABLE `user` (
-  `id` int NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `phone` varchar(255) DEFAULT NULL,
-  `address` varchar(255) DEFAULT NULL,
-  `role_id` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id`, `name`, `email`, `password`, `created_at`, `updated_at`, `phone`, `address`, `role_id`) VALUES
-(1, 'sukopay', 'voodoomodoo@gmail.com', '$2y$12$4ikr5JPN1zdd21.dY/0K/ubUV54Avw6ZpC4zvtULnqn6PMh9gLp2e', '2021-05-17 22:09:20', '2021-05-17 22:09:20', NULL, NULL, 1),
-(3, 'sdfsd', 'fahrursanjaya@gmail.com', '$2y$12$DUXcmZNsplVYS0bWac4rFeR4olmKbBPX6jTYu87Hq2ri73yfxRbD.', '2021-05-18 06:03:25', '2021-05-18 06:03:25', NULL, NULL, 2),
-(4, 'Alvina Vania', 'alvina@admin.com', '$2y$12$pOePKRINkI8yXQljhve.LOP3qCLsm6wV8G/VZlZHaDSz974NnJ3RW', '2021-05-18 19:12:43', '2021-05-18 19:12:43', NULL, NULL, 1),
-(5, 'alvina', 'alvina@user.com', '$2y$12$U.LDjKbgmGC/htGEpoDU9ef6Q.P7ZF50cPjf9fkWsGZ/Fmh8n.VEu', '2021-05-18 23:50:10', '2021-05-19 10:36:14', '444444', 'jl. delta barat', 2),
-(6, 'alvina', 'alvina@alvina.com', '$2y$12$Z2SZhLkL6sN0ZTHdS06I6.1QRJcgT40GZAJwnXjRuL1d8fyTPPo.m', '2021-05-19 20:09:54', '2021-05-19 20:20:50', '444444', 'jalan mangga', 2),
-(7, 'alvina', 'alvinabaru@user.com', '$2y$12$PjMw6Yll.VqQxyTeQBPoeeJIBrXyRtxlHZG4e1a1CcZlvB3POt54i', '2021-05-22 10:46:13', '2021-05-22 10:51:49', '4444433', 'jalan mangga', 2);
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `category`
---
-ALTER TABLE `category`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `product`
---
-ALTER TABLE `product`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `rekening`
---
-ALTER TABLE `rekening`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `role`
---
-ALTER TABLE `role`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `category`
---
-ALTER TABLE `category`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `product`
---
-ALTER TABLE `product`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `rekening`
---
-ALTER TABLE `rekening`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `role`
---
-ALTER TABLE `role`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+SET FOREIGN_KEY_CHECKS = 1;

@@ -2,12 +2,11 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PencairanController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\AdminController;
-
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,8 +36,12 @@ Route::get('/logout', [UserController::class, "logout"]);
 Route::group(['middleware' => ['admin_auth']], function () {
     Route::get('/admin-pengguna', [AdminController::class, "index"]);
     Route::get('/admin-pengguna/delete/{id}', [AdminController::class, "destroy"]);
-    Route::get('/admin-transaksi', function () {return view('admin_transaksi');});
-    Route::get('/admin-penarikan', function () {return view('admin_penarikan');});
+    // Route::get('/admin-transaksi', function () {return view('admin_transaksi');});
+    Route::get('/admin-transaksi', [OrderController::class, "admin_transaksi"]);
+    Route::get('/admin-confirm-order/{id}', [OrderController::class, "admin_confirm_order"]);
+    // Route::get('/admin-penarikan', function () {return view('admin_penarikan');});
+    Route::get('/admin-penarikan', [PencairanController::class, "admin_penarikan"]);
+    Route::get('/admin-confirm-penarikan/{id}', [PencairanController::class, "admin_confirm_penarikan"]);
 });
 
 Route::group(['middleware' => ['web_auth']], function () {
@@ -46,42 +49,51 @@ Route::group(['middleware' => ['web_auth']], function () {
     Route::get('/pencarian', [SearchController::class, "index"]);
     Route::get('/detail-buku/{id}', [ProductController::class, "detail"]);
     Route::get('/keranjang', [CartController::class, "index"]);
-
     Route::get('/keranjang/add/{id}', [CartController::class, "addToCart"]);
+    Route::get('/keranjang/delete/{id}', [CartController::class, "delete"]);
 
-    Route::get('/pembayaran', 'App\Http\Controllers\TransaksiController@showpembayaran');
-
-    Route::get('/bukti-transfer', function () {return view('infopembayaran');});
+    Route::get('/pembayaran', [CartController::class, "pembayaran"]);
+    Route::get('/pembayaran/{id}', [CartController::class, "pembayaran"]);
+    // Route::get('/pembayaran', function () {return view('pembayaran');});
+    Route::get('/create-order', [OrderController::class, "create_order"]);
+    Route::get('/bukti-transfer/{id}', [OrderController::class, "bukti_transfer"]);
+    Route::post('/upload-bukti', 'App\Http\Controllers\OrderController@upload_bukti')
+            ->name('uploadbukti');
+    // Route::get('/bukti-transfer', function () {return view('infopembayaran');});
 
     Route::get('/profile', 'App\Http\Controllers\ProfileController@show')
             ->name('showprofile');
     Route::get('/edit-profile', 'App\Http\Controllers\ProfileController@showedit')
-            ->name('showeditprofile');        
+            ->name('showeditprofile');
     Route::post('/edit-profile/{id}', 'App\Http\Controllers\ProfileController@update')
             ->name('updateprofile');
-    Route::post('/input-rekening', 'App\Http\Controllers\RekeningController@inputdetail')
-            ->name('inputrekening');
 
-    Route::get('/pesanan', function () {return view('pesanan');});
-    
+    Route::get('/edit-rekening', 'App\Http\Controllers\RekeningController@showedit')
+            ->name('showeditrekening');
+    Route::post('/edit-rekening/{id}', 'App\Http\Controllers\RekeningController@update')
+            ->name('updaterekening');
+
+    // Route::get('/pesanan', function () {return view('pesanan');});
+    Route::get('/pesanan', [OrderController::class, "index"]);
+
     Route::get('/produk', 'App\Http\Controllers\ProductController@show')
             ->name('showproduk');
 
-            
-    Route::get('/edit-buku/{id}',  'App\Http\Controllers\ProductController@showeditdetail')
-            ->name('showeditbuku');;
-    Route::patch('/editbuku/{id}',  'App\Http\Controllers\ProductController@editdetail')
-            ->name('editdetail');;
-    Route::delete('/delete-buku/{id}',  'App\Http\Controllers\ProductController@deleteproduk')
-            ->name('deleteproduk');;
+    Route::get('/edit-buku/{id}', [ProductController::class, "showedit"]);
+    Route::post('/edit-buku/{id}', 'App\Http\Controllers\ProductController@update')
+            ->name('updatebuku');
+    Route::get('/delete-buku/{id}', [ProductController::class, "delete"]);
 
     Route::get('/tambah-buku', function () { return view('produk_tambah');});
     Route::post('/input-produk', 'App\Http\Controllers\ProductController@inputdetail')
             ->name('inputproduk');
 
-    Route::get('/penjualan', function () { return view('penjualan');});
-    Route::get('/penghasilan', function () {return view('penghasilan');});
-    Route::get('/ajukan', function () {return view('penghasilan_info');});
+    // Route::get('/penjualan', function () { return view('penjualan');});
+    Route::get('/penjualan', [OrderController::class, "list_penjualan"]);
+    Route::get('/confirm-status/{id}/{id2}', [OrderController::class, "penjual_confirm_order"]);
+    // Route::get('/penghasilan', function () {return view('penghasilan');});
+    Route::get('/penghasilan', [PencairanController::class, "index"]);
+    Route::get('/ajukan', [PencairanController::class, "ajukan"]);
+    // Route::get('/ajukan', function () {return view('penghasilan_info');});
+
 });
-
-

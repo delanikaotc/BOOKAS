@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/pengguna.css">
+        <link rel="stylesheet" href="{{ url('/css/pengguna.css') }}">
 
     </head>
 
@@ -33,7 +33,7 @@
               <a href="{{ url('/penjualan') }}" style="color: #FFFFFF;"><i class="bi bi-file-earmark-bar-graph" ></i> Penjualan</a>
               </button>
               <a href="{{ url('/penghasilan') }}" style="color: #212121;"><i class="bi bi-cash-stack" ></i> Penghasilan</a>
-              <a href="/logout" style="color: #EA6941;"><i class="bi bi-box-arrow-right"></i> Keluar</a>
+              <a href="{{ url('/logout') }}" style="color: #EA6941;"><i class="bi bi-box-arrow-right"></i> Keluar</a>
             </div>
           </div>
 
@@ -49,57 +49,40 @@
                                 <th scope="col">Pesanan</th>
                                 <th scope="col">Total</th>
                                 <th scope="col">Status</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
+                          <?php
+                          $arr_warna = array('danger', 'warning', 'primary', 'info', 'success');
+                          $arr_status = array('Proses Pembayaran', 'Menunggu Persetujuan Admin', 'Menunggu Persetujuan Penjual', 'Proses Pengiriman', 'Selesai');
+                          ?>
+                          @foreach ($items as $value):
                             <tr>
-                                <td>#B28479</td>
-                                <td>16:15 04/03/21</td>
-                                <td>Wingit</td>
-                                <td>Rp50.000,00</td>
-                                <td>
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
-                                    Perlu dikirim
-                                    </button>
-                                    <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Selesai</a>
-                                    </div>
-                                </div>
-                                </td>
-                             </tr>
-                             <tr>
-                                <td>#B28479</td>
-                                <td>16:15 04/03/21</td>
-                                <td>Wingit</td>
-                                <td>Rp50.000,00</td>
-                                <td>
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
-                                    Perlu dikirim
-                                    </button>
-                                    <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Selesai</a>
-                                    </div>
-                                </div>
-                                </td>
-                             </tr>
-                             <tr>
-                                <td>#B28479</td>
-                                <td>16:15 04/03/21</td>
-                                <td>Wingit</td>
-                                <td>Rp50.000,00</td>
-                                <td>
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
-                                    Perlu dikirim
-                                    </button>
-                                    <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Selesai</a>
-                                    </div>
-                                </div>
-                                </td>
-                             </tr>
+                              <td>{{ $value->no_transaksi }}</td>
+                              <td>{{ $value->created_at }}</td>
+                              <td>{{ $value->name }}</td>
+                              <td>Rp. {{ number_format($value->price*$value->qty, 0,",",".") }}</td>
+                              <td>
+                                <label class="badge badge-{{ $arr_warna[$value->status] }}">{{ $arr_status[$value->status] }}</label>
+                              </td>
+                              <td>
+                                <?php $btn_confirm=false; $stt='';
+                                if ($value->status==2) {
+                                  $stt=3;
+                                  $btn_confirm=true;
+                                }
+                                if ($value->status==3) {
+                                  $stt=4;
+                                  $btn_confirm=true;
+                                }
+                                ?>
+                                @if ($btn_confirm)
+                                  <a href="confirm-status/{{ $value->no_transaksi }}/{{ $stt }}" class="btn btn-success" onclick="return confirm('Anda Yakin?')">Confirm</a>
+                                @endif
+                              </td>
+                            </tr>
+                          @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -120,4 +103,3 @@
         <script src="https://kit.fontawesome.com/9923874ec2.js " crossorigin="anonymous "></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous ">
         </script>
-

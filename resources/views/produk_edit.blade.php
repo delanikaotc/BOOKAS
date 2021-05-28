@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/pengguna.css">
+  <link rel="stylesheet" href="{{ url('/css/pengguna.css') }}">
 
 </head>
 
@@ -33,7 +33,7 @@
             </button>
             <a href="{{ url('/penjualan') }}" style="color: #212121;"><i class="bi bi-file-earmark-bar-graph"></i> Penjualan</a>
             <a href="{{ url('/penghasilan') }}" style="color: #212121;"><i class="bi bi-cash-stack"></i> Penghasilan</a>
-            <a href="/logout" style="color: #EA6941;"><i class="bi bi-box-arrow-right"></i> Keluar</a>
+            <a href="{{ url('/logout') }}" style="color: #EA6941;"><i class="bi bi-box-arrow-right"></i> Keluar</a>
           </div>
         </div>
 
@@ -42,58 +42,60 @@
             <div class="card-cont">
               <h1>Sunting buku</h1>
               <div class="dropdown-divider"></div>
-              <form class="form-input-hasil" action="/editbuku/{{$product->id}}" enctype="multipart/form-data" method="POST">
+              <form class="form-input-hasil" action="{{ route('updatebuku', $product->id)}}" enctype="multipart/form-data" method="POST">
                 @csrf
-                @method('PATCH')
                 <div class="form-group row">
-                  <label for="name" class="col-sm-2 col-form-label">Judul Buku</label>
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Judul Buku</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputJudul" name="name" value="{{$product->name}}"> 
+                    <input type="text" class="form-control" id="inputJudul" name="name" value="{{$product->name}}">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="penulis" class="col-sm-2 col-form-label">Penulis</label>
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Pengarang</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputPengarang" name="penulis" value="{{$product->penulis}}">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Deskripsi</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputDesc" name="deskripsi" value="{{$product->deskripsi}}">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="kondisi" class="col-sm-2 col-form-label">Kondisi</label>
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Kondisi</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputKondisi" name="kondisi" value="{{$product->kondisi}}">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="penerbit" class="col-sm-2 col-form-label">Penerbit</label>
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Penerbit</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputPenerbit" name="penerbit" value="{{$product->penerbit}}">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="tgl_terbit" class="col-sm-2 col-form-label">Tanggal Terbit</label>
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Tahun Terbit</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputTahunTerbit" name="tgl_terbit" value="{{$product->tgl_terbit}}">
+                    <input type="date" class="form-control" id="inputTahunTerbit" name="tgl_terbit" value="{{$product->tgl_terbit}}">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="harga" class="col-sm-2 col-form-label">Harga</label>
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Harga</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputHarga" name="price" value="{{$product->price}}">
+                    <input type="text" class="form-control" id="inputHarga" name="price" value="Rp. {{ number_format($product->price,0,',','.') }}">
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="gambar" class="col-sm-2 col-form-label">Gambar</label>
                   <div class="col-sm-10">
-                    <input type="file" name="image" value="{{$product->image}}">
+                    <input type="file" name="image">
                   </div>
                 </div>
-                <button type="submit" class="btn btn-bookas">
+                <a href="/produk" class="btn btn-warning text-white">
+                  <b>Kembali</b>
+                </a>
+                <button type="submit" class="btn btn-bookas float-right">
                   <p>Simpan</p>
                 </button>
               </form>
@@ -147,5 +149,27 @@
       <script src="https://kit.fontawesome.com/9923874ec2.js " crossorigin="anonymous "></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous ">
       </script>
+      <script type="text/javascript">
+      $( "[name='price']" ).keyup(function() {
+        $( "[name='price']" ).val(formatRupiah($( "[name='price']" ).val(),'Rp. '));
+      });
 
+      /* Fungsi */
+      function formatRupiah(angka, prefix)
+      {
+        var number_string = angka.replace(/[^,\d]/g, '').toString(),
+          split	= number_string.split(','),
+          sisa 	= split[0].length % 3,
+          rupiah 	= split[0].substr(0, sisa),
+          ribuan 	= split[0].substr(sisa).match(/\d{3}/gi);
+
+        if (ribuan) {
+          separator = sisa ? '.' : '';
+          rupiah += separator + ribuan.join('.');
+        }
+
+        rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+        return prefix == undefined ? rupiah : (rupiah ? prefix + rupiah : '');
+      }
+      </script>
     </footer>

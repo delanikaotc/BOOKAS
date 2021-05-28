@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/admin.css">
+        <link rel="stylesheet" href="{{ url('/css/admin.css') }}">
 
     </head>
 
@@ -23,10 +23,10 @@
     <div class="sidenav">
         <h2 class="text-center" style="">Halo Admin!</h2>
         <h2 class="text-center" style="color: #F4BD5C;">{{ session("name") }}</h2>
-        <a href="/admin-pengguna" ><i class="bi bi-people-fill"></i>User</a>
-        <a href="/admin-transaksi" class="active"><i class="bi bi-handbag-fill"></i>Transaksi</a>
-        <a href="/admin-penarikan" ><i class="bi bi-credit-card-2-back-fill"></i>Penarikan</a>
-        <a style="float: left" href="/logout" class="btn"><i class="bi bi-box-arrow-left"></i>Keluar</a>
+        <a href="{{ url('/admin-pengguna') }}" ><i class="bi bi-people-fill"></i>User</a>
+        <a href="{{ url('/admin-transaksi') }}" class="active"><i class="bi bi-handbag-fill"></i>Transaksi</a>
+        <a href="{{ url('/admin-penarikan') }}" ><i class="bi bi-credit-card-2-back-fill"></i>Penarikan</a>
+        <a style="float: left" href="{{ url('/logout') }}" class="btn"><i class="bi bi-box-arrow-left"></i>Keluar</a>
     </div>
     <!--END sidebar-->
 
@@ -42,112 +42,40 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">No. Trans</th>
-                                            <th scope="col">No. User</th>
-                                            <th scope="col">No. Buku</th>
+                                            <th scope="col">Penjual</th>
+                                            <th scope="col">Buku</th>
                                             <th scope="col">Tanggal</th>
-                                            <th scope="col">Total</th>
+                                            <th scope="col">Total(Rp)</th>
                                             <th scope="col">Status</th>
-                                            <th scope="col">Edit</th>
-                                            <th scope="col">Delete</th>
+                                            <th scope="col">Bukti</th>
+                                            <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                      <?php
+                                      $arr_warna = array('danger', 'warning', 'primary', 'info', 'success');
+                                      $arr_status = array('Proses Pembayaran', 'Menunggu Persetujuan Admin', 'Menunggu Persetujuan Penjual', 'Proses Pengiriman', 'Selesai');
+                                      ?>
+                                      @foreach ($items as $key => $value)
                                         <tr>
-                                            <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>17 Agustus 2020</td>
-                                            <td>Rp. 200.000</td>
-                                            <td>
-                                                <div class="btn-group">
-                                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                  Status
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                  <a class="dropdown-item" href="#">Pending</a>
-                                                  <a class="dropdown-item" href="#">Paid</a>
-                                                </div>
-                                              </div>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-danger" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
-                                            </td>
+                                          <td>#{{ $value->no_transaksi }}</td>
+                                          <td>{{ $value->nama_penjual }}</td>
+                                          <td>{{ $value->name }}</td>
+                                          <td>{{ $value->created_at }}</td>
+                                          <td>{{ number_format($value->price*$value->qty,0,",",".") }}</td>
+                                          <td>
+                                            <label class="badge badge-{{ $arr_warna[$value->status] }}">{{ $arr_status[$value->status] }}</label>
+                                          </td>
+                                          <td>
+                                            <a href="{{ url('storage/bukti_transfer') }}/{{ $value->foto_bukti }}" class="btn btn-info" target="_blank">View</a>
+                                          </td>
+                                          <td>
+                                            @if ($value->status==1)
+                                              <a href="{{ url('admin-confirm-order') }}/{{$value->no_transaksi}}" onclick="return confirm('Anda Yakin?')" class="btn btn-success">Confirm</a>
+                                            @endif
+                                          </td>
                                         </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>17 Agustus 2020</td>
-                                            <td>Rp. 200.000</td>
-                                            <td>
-                                                <div class="btn-group">
-                                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                  Status
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                  <a class="dropdown-item" href="#">Pending</a>
-                                                  <a class="dropdown-item" href="#">Paid</a>
-                                                </div>
-                                              </div>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-danger" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Larry</td>
-                                            <td>Bird</td>
-                                            <td>17 Agustus 2020</td>
-                                            <td>Rp. 200.000</td>
-                                            <td>
-                                                <div class="btn-group">
-                                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                  Status
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                  <a class="dropdown-item" href="#">Pending</a>
-                                                  <a class="dropdown-item" href="#">Paid</a>
-                                                </div>
-                                              </div>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-danger" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>Martin</td>
-                                            <td>Williams</td>
-                                            <td>17 Agustus 2020</td>
-                                            <td>Rp. 200.000</td>
-                                            <td>
-                                                <div class="btn-group">
-                                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                  Status
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                  <a class="dropdown-item" href="#">Pending</a>
-                                                  <a class="dropdown-item" href="#">Paid</a>
-                                                </div>
-                                              </div>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-danger" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
-                                            </td>
-                                        </tr>
+                                      @endforeach
                                     </tbody>
                                 </table>
 
