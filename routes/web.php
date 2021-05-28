@@ -31,7 +31,7 @@ Route::get('/masuk', [UserController::class, "login"]);
 Route::post('/masuk', [UserController::class, "doLogin"]);
 Route::get('/tentang', [AboutController::class, "about"]);
 Route::get('/hubungi', [AboutController::class, "hubungi"]);
-Route::get('/', function (){ return redirect('/home');});
+Route::get('/', function (){ return redirect('/BOOKAS');});
 
 Route::get('/logout', [UserController::class, "logout"]);
 
