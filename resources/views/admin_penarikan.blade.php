@@ -16,7 +16,7 @@
 <body>
   <div class="container-fluid">
     <div class="container-navbar">
-        @include("component.nav_header")
+        @include("component.nav_headeradmin")
       </div>
     </div>
     <!--END Navbar-->
