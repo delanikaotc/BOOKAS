@@ -1,806 +1,812 @@
 html {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 html p {
-  margin-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
-  background-color: #FFFCF6;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #FFFCF6;
 }
 
 .oren {
-  color: #EA6941;
+    color: #EA6941;
 }
 
 .kuning {
-  color: #F4BD5C;
+    color: #F4BD5C;
 }
 
 .container-fluid {
-  background-color: #F4BD5C;
-  height: 100px;
+    background-color: #F4BD5C;
+    height: 100px;
 }
 
 .container-navbar {
-  margin-left: 135px;
-  margin-right: 135px;
+    margin-left: 135px;
+    margin-right: 135px;
 }
 
 .logo {
-  width: 70px;
-  height: 70px;
+    width: 70px;
+    height: 70px;
 }
 
 .navbar-brand span {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 30px;
-  color: #FFFFFF;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: #FFFFFF;
 }
 
 .navbar .nav-item {
-  margin-left: 73px;
+    margin-left: 73px;
 }
 
 .navbar .nav-item p {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  color: #EA6941;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #EA6941;
 }
 
 .dropdowntext {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  color: #EA6941;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #EA6941;
 }
 
 .container-navbar .nav-item i {
-  color: #EA6941;
+    color: #EA6941;
 }
 
 .bacabuku1 {
-  margin-top: 150px;
+    margin-top: 150px;
 }
 
 .section-content {
-  padding-top: 150px;
-  margin-left: 50px;
-  margin-right: 50px;
+    padding-top: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .section-content .title {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  color: #000000;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    color: #000000;
 }
 
 .section-content .text {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
 }
 
 .section-content .btn-bookas {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .section-content .btn-bookas {
-  min-width: 230px;
-  background: #EA6941;
-  border-radius: 20px;
+    min-width: 230px;
+    background: #EA6941;
+    border-radius: 20px;
 }
 
 .section-content .btn-bookas p {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 22px;
-  color: #FFFFFF !important;
-  text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    color: #FFFFFF !important;
+    text-align: center;
 }
 
 .btn-bookas:hover {
-  background-color: #D95B44, 100%;
+    background-color: #D95B44, 100%;
 }
 
 .section-register {
-  padding-top: 100px;
-  margin-left: 50px;
-  margin-right: 50px;
+    padding-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .section-register form {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 
 .section-register .form-daftar input {
-  width: 410px;
-  height: 44px;
+    width: 410px;
+    height: 44px;
 }
 
 .section-register .card {
-  position: absolute;
-  width: 470px;
-  height: 630px;
-  background: #FFFFFF;
-  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
+    position: absolute;
+    width: 470px;
+    height: 630px;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
 }
 
 .section-register .form-group label {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
 }
 
 .section-register .form-daftar {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .section-register .form-masuk {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .section-register .form-group {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .section-register .card .btn-bookas {
-  width: 410px;
-  height: 44px;
+    width: 410px;
+    height: 44px;
 }
 
 .btn-bookas {
-  background: #EA6941;
-  border-radius: 5px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  color: #FFFFFF !important;
-  text-align: center !important;
+    background: #EA6941;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF !important;
+    text-align: center !important;
 }
 
 .btn-bookas p {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  color: #FFFFFF !important;
-  text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF !important;
+    text-align: center;
 }
 
 .section-register .form-masuk .btn-bookas {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .section-register .form-masuk .lupasandi {
-  margin-left: 110px;
-  margin-top: 30px;
+    margin-left: 110px;
+    margin-top: 30px;
 }
 
 .section-register .dropdown-divider {
-  margin-top: 21px;
-  width: 410px;
+    margin-top: 21px;
+    width: 410px;
 }
 
 .section-register .dropdown-item p {
-  margin-left: 80px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
+    margin-left: 80px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
 }
 
 .container-navbar .search .form-control {
-  margin-left: 50px;
-  border-radius: 15px;
-  width: 500px;
-  height: 44px;
+    margin-left: 50px;
+    border-radius: 15px;
+    width: 500px;
+    height: 44px;
 }
 
 .search input[type="submit"] {
-  position: relative;
-  margin-left: -50px;
-  background: url("/frontend/img/search.png") center no-repeat;
-  height: 30px;
-  width: 30px;
+    position: relative;
+    margin-left: -50px;
+    background: url("/frontend/img/search.png") center no-repeat;
+    height: 30px;
+    width: 30px;
 }
 
 .section-topbar {
-  margin-left: 0px;
+    margin-left: 0px;
 }
 
 .section-topbar p {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  color: #EA6941;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #EA6941;
 }
 
 .section-banner {
-  margin-top: 0px;
-  margin-left: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
 }
 
 .section-midcontent {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .card {
-  background: #FFFFFF;
-  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .section-midcontent .card {
-  height: 365px;
+    height: 365px;
 }
 
 .section-midcontent .section-carddalam .card {
-  height: 200px;
-  background: #FFFFFF;
-  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-  border: 0px;
-  border-radius: 0px;
+    height: 200px;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    border: 0px;
+    border-radius: 0px;
 }
 
 .section-midcontent .section-carddalam .row {
-  padding-top: 20px;
-  margin-left: 0px;
+    padding-top: 20px;
+    margin-left: 0px;
 }
 
 .section-midcontent h1 {
-  padding-top: 48px;
-  padding-left: 20px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
+    padding-top: 48px;
+    padding-left: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
 }
 
 .book-title {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  width: 100%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    width: 100%;
 }
 
 .book-price {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  color: #EA6941;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #EA6941;
 }
 
 .section-midcontent .section-carddalam {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 .section-midcontent .section-carddalam .book-title {
-  margin-top: 8px;
+    margin-top: 8px;
 }
 
 .section-midcontent .section-carddalam p {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 .section-cardcontent {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .section-cardcontent .card {
-  height: 300px;
+    height: 300px;
 }
 
 .section-cardcontent .card img {
-  width: 166px;
+    width: 166px;
 }
 
 .section-cardcontent .text-card {
-  margin-top: 8px;
+    margin-top: 8px;
 }
 
 .section-cardcontent .card .text-card p {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 .section-cardcontent .card button {
-  margin-top: 10px;
-  margin-left: 80px;
+    margin-top: 10px;
+    margin-left: 80px;
 }
 
 .section-cardcontent .card .btn-bookas {
-  width: 75px;
-  height: 30px;
+    width: 75px;
+    height: 30px;
 }
 
 .section-cardcontent .card .btn-bookas i {
-  padding-top: 0%;
+    padding-top: 0%;
 }
 
 .section-cardcontent .card .btn-bookas p {
-  margin-top: -5%;
+    margin-top: -5%;
 }
 
 .section-bookdetail {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .section-bookdetail .book-image {
-  height: 450px;
+    height: 450px;
 }
 
 .section-bookdetail .midcont .title {
-  font-weight: bold;
-  font-size: 48px;
+    font-weight: bold;
+    font-size: 48px;
 }
 
 .section-bookdetail .midcont .author {
-  font-size: 22px;
+    font-size: 22px;
 }
 
 .section-bookdetail .midcont .author span {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 .section-bookdetail .midcont .title-cond {
-  margin-top: 35px;
-  font-weight: bold;
-  font-size: 22px;
-  color: #EA6941;
+    margin-top: 35px;
+    font-weight: bold;
+    font-size: 22px;
+    color: #EA6941;
 }
 
 .section-bookdetail .midcont .detail-cond {
-  margin-top: 8px;
-  font-size: 18px;
+    margin-top: 8px;
+    font-size: 18px;
 }
 
 .section-bookdetail .cardbeli {
-  height: 207px;
-  background: #FFFFFF;
-  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+    height: 207px;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .section-bookdetail .cardbeli .content {
-  margin-top: 20px;
-  margin-left: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .section-bookdetail .cardbeli h4 {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .section-bookdetail .cardbeli h2 {
-  font-size: 35px;
+    font-size: 35px;
 }
 
 .section-bookdetail .cardbeli button {
-  width: 215px;
-  margin-top: 5px;
-  margin-left: 27px;
+    width: 215px;
+    margin-top: 5px;
+    margin-left: 27px;
 }
 
 .section-bookdetail .cardbeli .btn-keranjang {
-  border: 1px solid #EA6941;
-  color: #FFFFFF;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 5px;
+    border: 1px solid #EA6941;
+    color: #FFFFFF;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 5px;
 }
 
 .section-bookdetail .cardbeli .btn-keranjang p {
-  color: #EA6941;
+    color: #EA6941;
 }
 
 .section-carddetail .card {
-  margin-top: 50px;
-  height: 400px;
+    margin-top: 50px;
+    height: 400px;
 }
 
 .section-carddetail .book-detail {
-  margin-top: 25px;
-  margin-left: 25px;
+    margin-top: 25px;
+    margin-left: 25px;
 }
 
 .section-carddetail .book-detail .title {
-  font-weight: bold;
-  font-size: 22px;
-  color: #EA6941;
+    font-weight: bold;
+    font-size: 22px;
+    color: #EA6941;
 }
 
 .section-carddetail .book-detail .row p {
-  font-weight: 500;
-  font-size: 18px;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .section-carddetail .book-detail .row .col-2 {
-  margin-top: 12px;
+    margin-top: 12px;
 }
 
 .section-carddetail .book-detail .row .detail-title {
-  color: #C4C4C4;
+    color: #C4C4C4;
 }
 
 .section-carddetail .book-detail .dropdown-divider {
-  width: 1130px;
-  margin-top: 30px;
-  margin-bottom: 25px;
+    width: 1130px;
+    margin-top: 30px;
+    margin-bottom: 25px;
 }
 
 .section-carddetail .book-detail .text-detail {
-  margin-top: 12px;
+    margin-top: 12px;
 }
 
 .footer {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .footer .row {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .footer .row h1 {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .footer a {
-  color: #000000;
+    color: #000000;
 }
 
 .footer .text-center {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .box {
-  position: absolute;
-  background-color: #EA6941;
-  height: 100px;
-  width: 100px;
+    position: absolute;
+    background-color: #EA6941;
+    height: 100px;
+    width: 100px;
 }
 
 .box1 {
-  position: absolute;
-  background-color: #F4BD5C;
-  height: 50px;
-  width: 50px;
-  bottom: 10%;
+    position: absolute;
+    background-color: #F4BD5C;
+    height: 50px;
+    width: 50px;
+    bottom: 10%;
 }
 
 .container-header {
-  margin-top: 70px;
-  margin-bottom: 24px;
-  margin-left: 135px;
-  margin-right: 135px;
-  width: 1170px;
-  height: 250px;
-  background-color: #FFFFFF;
-  border-radius: 10px;
+    margin-top: 70px;
+    margin-bottom: 24px;
+    margin-left: 135px;
+    margin-right: 135px;
+    width: 1170px;
+    height: 250px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
 }
 
 .header-top {
-  font-size: 36px;
-  font-weight: 500;
-  padding-top: 6px;
-  padding-left: 24px;
-  /* margin-bottom: 12px; */
+    font-size: 36px;
+    font-weight: 500;
+    padding-top: 6px;
+    padding-left: 24px;
+    /* margin-bottom: 12px; */
 }
 
 .hr1 {
-  width: 1122px;
+    width: 1122px;
 }
 
 .header-bottom {
-  padding-left: 24px;
-  padding-top: 6px;
-  font-size: 22px;
-  font-weight: 500;
-  color: #EA6941;
+    padding-left: 24px;
+    padding-top: 6px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #EA6941;
 }
 
 .btn-secondary {
-  background: transparent;
-  border-radius: 10px;
-  text-align: center !important;
-  border-color: #EA6941;
-  border-style: solid 1px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 22px;
-  color: #EA6941 !important;
-  text-align: center;
-  margin-right: 36px;
-  margin-bottom: 24px;
+    background: transparent;
+    border-radius: 10px;
+    text-align: center !important;
+    border-color: #EA6941;
+    border-style: solid 1px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    color: #EA6941 !important;
+    text-align: center;
+    margin-right: 36px;
+    margin-bottom: 24px;
 }
 
 .btn-secondary:hover {
-  background: transparent;
-  border-color: #EA6941;
+    background: transparent;
+    border-color: #EA6941;
 }
 
 .container-cartitem {
-  margin-bottom: 24px;
-  margin-left: 135px;
-  margin-right: 135px;
-  width: 1170px;
-  height: 253px;
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #C4C4C4;
+    margin-bottom: 24px;
+    margin-left: 135px;
+    margin-right: 135px;
+    width: 1170px;
+    height: 253px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C4C4C4;
 }
 
 .cartitem-top {
-  padding-top: 8px;
-  padding-left: 16px;
-  font-size: 22px;
+    padding-top: 8px;
+    padding-left: 16px;
+    font-size: 22px;
 }
 
 .cartitem-top-avatar {
-  margin-right: 14px;
-  margin-left: 24px;
+    margin-right: 14px;
+    margin-left: 24px;
 }
 
 .avatar-cartitem {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 }
 
 .cartitem-top-nameAcc {
-  padding-top: 6px;
+    padding-top: 6px;
 }
 
 .cartitem-bottom {
-  padding-top: 6px;
-  padding-left: 24px;
-  font-size: 18px;
+    padding-top: 6px;
+    padding-left: 24px;
+    font-size: 18px;
 }
 
 .book-cartitem {
-  margin-left: -84px;
+    margin-left: -84px;
 }
 
 .bookcover-cartitem {
-  width: 84px;
-  height: 140px;
-  border-radius: 10px;
+    width: 84px;
+    height: 140px;
+    border-radius: 10px;
 }
 
 .booktitle-cartitem {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 .price-cartitem {
-  padding-top: 24px;
-  margin-left: 26px;
-  margin-right: 26px;
+    padding-top: 24px;
+    margin-left: 26px;
+    margin-right: 26px;
 }
 
 .delete-cartitem {
-  padding-top: 24px;
-  padding-left: 48px;
-  margin-left: 32px;
+    padding-top: 24px;
+    padding-left: 48px;
+    margin-left: 32px;
 }
 
 .btn-delete {
-  background: #EB3C18;
-  border-radius: 5px;
-  text-align: center !important;
-  border-color: #EB3C18;
-  border-style: solid 1px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  color: #FFFFFF !important;
-  text-align: center;
-  margin-right: 36px;
+    background: #EB3C18;
+    border-radius: 5px;
+    text-align: center !important;
+    border-color: #EB3C18;
+    border-style: solid 1px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF !important;
+    text-align: center;
+    margin-right: 36px;
 }
 
 .btn-delete:hover {
-  background: #EB3C18;
-  border-color: #EB3C18;
+    background: #EB3C18;
+    border-color: #EB3C18;
 }
 
 .footer-cart {
-  margin-top: 100px;
+    margin-top: 100px;
 }
 
 .container-total {
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
-  margin-bottom: -50px;
-  margin-left: 135px;
-  margin-right: 135px;
-  width: 1170px;
-  height: 155px;
-  background-color: #FFFBFA;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 5px 5px 0px 0px;
-  border-color: #C4C4C4 !important;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    margin-bottom: -50px;
+    margin-left: 135px;
+    margin-right: 135px;
+    width: 1170px;
+    height: 155px;
+    background-color: #FFFBFA;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px 5px 0px 0px;
+    border-color: #C4C4C4 !important;
 }
 
 .container-total-top {
-  padding-top: 8px;
-  padding-left: 16px;
-  font-size: 22px;
+    padding-top: 8px;
+    padding-left: 16px;
+    font-size: 22px;
 }
 
 .labeltotal {
-  font-size: 22px;
-  font-weight: 500;
-  margin-right: 12px;
-  margin-left: 735px;
-  padding-top: 16px;
+    font-size: 22px;
+    font-weight: 500;
+    margin-right: 12px;
+    margin-left: 735px;
+    padding-top: 16px;
 }
 
 .totalcart {
-  font-size: 36px;
-  font-weight: 500;
-  color: #EA6941;
+    font-size: 36px;
+    font-weight: 500;
+    color: #EA6941;
 }
 
 .container-total-bottom {
-  margin-right: 12px;
-  margin-left: 975px;
-  padding-top: 16px;
+    margin-right: 12px;
+    margin-left: 975px;
+    padding-top: 16px;
 }
 
 .container-header-pembayaran {
-  margin-top: 70px;
-  margin-bottom: 24px;
-  margin-left: 135px;
-  margin-right: 135px;
-  width: 1170px;
-  height: 244px;
-  background-color: #FFFFFF;
-  border-radius: 10px;
+    margin-top: 70px;
+    margin-bottom: 24px;
+    margin-left: 135px;
+    margin-right: 135px;
+    width: 1170px;
+    height: 244px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
 }
 
 .address-detail {
-  font-size: 22px;
-  font-weight: 500;
-  padding-top: 24px;
-  padding-left: 24px;
+    font-size: 22px;
+    font-weight: 500;
+    padding-top: 24px;
+    padding-left: 24px;
 }
 
 .container-subtotal {
-  width: 1170px;
-  height: 129px;
-  margin-top: 16px;
-  margin-bottom: 100px;
-  background-color: #FFFFFF;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #C4C4C4;
-  border-radius: 0px 0px 10px 10px;
-  margin-left: -1px;
-  font-size: 22px;
+    width: 1170px;
+    height: 129px;
+    margin-top: 16px;
+    margin-bottom: 100px;
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C4C4C4;
+    border-radius: 0px 0px 10px 10px;
+    margin-left: -1px;
+    font-size: 22px;
 }
 
 .container-subtotal-detail {
-  margin-left: 810px;
-  margin-top: 24px;
-  text-align: right;
+    margin-left: 810px;
+    margin-top: 24px;
+    text-align: right;
 }
 
 .label-subtotal {
-  margin-left: 12px;
+    margin-left: 12px;
 }
 
 .subtotal-price {
-  padding-top: 24px;
-  margin-left: 42px;
-  margin-right: 26px;
+    padding-top: 24px;
+    margin-left: 42px;
+    margin-right: 26px;
 }
 
 .bank-logo {
-  width: 100px;
-  height: 100px;
+    width: 100px;
+    height: 100px;
 }
 
 .bank-bottom {
-  text-align: center;
-  font-size: 22px;
-  font-weight: 500;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
 }
 
 .bank {
-  margin-right: 86px;
+    margin-right: 86px;
 }
 
 .title-infopembayaran {
-  text-align: center;
-  font-size: 36px;
-  font-weight: 500;
-  color: #FFFFFF;
-  margin-top: 14px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-top: 14px;
 }
 
 .container-infopembayaran {
-  width: 1170px;
-  height: 151px;
-  margin-left: 135px;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  font-size: 22px;
-  background-color: #FFFFFF;
-  border-radius: 10px;
+    width: 1170px;
+    height: 151px;
+    margin-left: 135px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-size: 22px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
 }
 
 .icon-bank {
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
 }
 
 .detail-bank {
-  margin-left: -52px;
+    margin-left: -52px;
 }
 
 .infopembayaran-bottom {
-  margin-left: 10px;
-  padding-top: 18px;
-  font-size: 22px;
+    margin-left: 10px;
+    padding-top: 18px;
+    font-size: 22px;
 }
 
 .btn-uploadbuktitrf {
-  background: #EA6941;
-  border-radius: 5px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  color: #FFFFFF !important;
-  text-align: center !important;
-  width: 1169px;
-  height: 44px;
-  margin-left: 135px;
+    background: #EA6941;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF !important;
+    text-align: center !important;
+    width: 1169px;
+    height: 44px;
+    margin-left: 135px;
 }
 
 .btn-uploadbuktitrf p {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  color: #FFFFFF !important;
-  text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF !important;
+    text-align: center;
 }
 
 .btn-uploadbuktitrf:hover {
-  background-color: #D95B44, 100%;
+    background-color: #D95B44, 100%;
 }
 
 .btn-uploadbuktitrf2 {
-  background: transparent;
-  border-radius: 5px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  color: #EA6941 !important;
-  text-align: center !important;
-  width: 1169px;
-  height: 44px;
-  margin-left: 135px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #EA6941;
+    background: transparent;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #EA6941 !important;
+    text-align: center !important;
+    width: 1169px;
+    height: 44px;
+    margin-left: 135px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #EA6941;
 }
 
 .btn-uploadbuktitrf2 p {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  color: #EA6941 !important;
-  text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #EA6941 !important;
+    text-align: center;
 }
 
 .btn-uploadbuktitrf2:hover {
-  background-color: transparent, 100%;
+    background-color: transparent, 100%;
 }
+
+.berhasil-hapus {
+    font-size: 24px;
+}
+
+
 /*# sourceMappingURL=styles.css.map */

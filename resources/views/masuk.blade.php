@@ -59,7 +59,7 @@
                             </section>
                         </form>
                     </div>
-                </div>
+                </div> 
                 <div class="col-6 ml-auto">
                     <img class="bacabuku1" src="img/bacabuku1.png" alt="">
                 </div>

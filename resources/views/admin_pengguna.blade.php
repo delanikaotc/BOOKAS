@@ -38,85 +38,34 @@
                     <div class="card border-0 shadow">
                         <div class="card-body p-5">
                             <div class="table-responsive">
+                                <h5 class="berhasil-hapus">@include('alert.alert')</h5>
                                 <table class="table m-0">
                                     <thead>
                                         <tr>
-                                            <th scope="col">No. User</th>
+                                            <th scope="col">ID. Role</th>
                                             <th scope="col">No. Role</th>
                                             <th scope="col">Email</th>
                                             <th scope="col">Nama</th>
-                                            <th scope="col">Penghasilan</th>
-                                            <th scope="col">Buku Terjual</th>
-                                            <th scope="col">Edit</th>
                                             <th scope="col">Delete</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($users as $user)
                                         <tr>
-                                            <th scope="row">1</th>
-                                            <td>1</td>
-                                            <td>Otto@gmail.com</td>
-                                            <td>Otto</td>
-                                            <td>Rp. 2.000.000</td>
-                                            <td>50</td>
-                                            <td>
-                                                <button class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-danger" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
-                                            </td>
+                                            <td>{{ $user->id }}</td>
+                                            <td>{{ $user->role_id }}</td>
+                                            <td>{{ $user->email }}</td>
+                                            <td>{{ $user->name }}</td>
+                                            <td><a href="admin-pengguna/delete/{{ $user->id }}" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
                                         </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>1</td>
-                                            <td>Jacob@gmail.com</td>
-                                            <td>Thornton</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>
-                                                <button class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-danger" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>2</td>
-                                            <td>Larry@gmail.com</td>
-                                            <td>Bird</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>
-                                                <button class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-danger" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>1</td>
-                                            <td>Martin@gmail.com</td>
-                                            <td>Williams</td>
-                                            <td>Rp. 150.000</td>
-                                            <td>2</td>
-                                            <td>
-                                                <button class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-danger" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
-                                            </td>
-                                        </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 

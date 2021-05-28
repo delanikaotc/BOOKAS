@@ -17,6 +17,6 @@ class AdminController extends Controller
 
     public function destroy($id){
         DB::delete('delete from user where id =?', [$id]);
-        return redirect('/admin-pengguna');
+        return back()->with("success", "Data pengguna berhasil dihapus!");
     }
 }
