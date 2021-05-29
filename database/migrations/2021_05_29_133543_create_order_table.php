@@ -15,27 +15,27 @@ class CreateOrderTable extends Migration
     {
         Schema::create('order', function (Blueprint $table) {
             $table->id();
-            $table->string('no_transaksi');
-            $table->integer('id_pembeli');
-            $table->integer('id_penjual');
-            $table->integer('id_product');
-            $table->string('nama_penjual');
-            $table->string('nama_pembeli');
-            $table->string('name');
-            $table->double('price');
-            $table->double('qty');
-            $table->string('image');
-            $table->date('tgl_terbit');
-            $table->string('penerbit');
-            $table->text('deskripsi');
-            $table->text('kondisi');
-            $table->string('penulis');
-            $table->integer('status');
-            $table->text('foto_bukti');
-            $table->dateTime('tgl_bukti');
-            $table->dateTime('tgl_confirm_admin');
-            $table->dateTime('tgl_confirm_pengirimann');
-            $table->dateTime('tgl_confirm_selesai');
+            $table->string('no_transaksi')->nullable();
+            $table->integer('id_pembeli')->nullable();
+            $table->integer('id_penjual')->nullable();
+            $table->integer('id_product')->nullable();
+            $table->string('nama_penjual')->nullable();
+            $table->string('nama_pembeli')->nullable();
+            $table->string('name')->nullable();
+            $table->double('price')->nullable();
+            $table->double('qty')->nullable();
+            $table->string('image')->nullable();
+            $table->date('tgl_terbit')->nullable();
+            $table->string('penerbit')->nullable();
+            $table->text('deskripsi')->nullable();
+            $table->text('kondisi')->nullable();
+            $table->string('penulis')->nullable();
+            $table->integer('status')->nullable();
+            $table->text('foto_bukti')->nullable();
+            $table->dateTime('tgl_bukti')->nullable();
+            $table->dateTime('tgl_confirm_admin')->nullable();
+            $table->dateTime('tgl_confirm_pengirimann')->nullable();
+            $table->dateTime('tgl_confirm_selesai')->nullable();
             $table->timestamps();
         });
     }

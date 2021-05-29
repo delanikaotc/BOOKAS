@@ -15,17 +15,17 @@ class CreateProductTable extends Migration
     {
         Schema::create('product', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_user');
-            $table->string('name');
-            $table->double('price');
-            $table->string('image');
-            $table->date('tgl_terbit');
-            $table->string('penerbit');
-            $table->text('deskripsi');
-            $table->text('kondisi');
-            $table->string('penulis');
-            $table->string('upload_bukti');
-            $table->string('tgl_upload');
+            $table->integer('id_user')->nullable();
+            $table->string('name')->nullable();
+            $table->double('price')->nullable();
+            $table->string('image')->nullable();
+            $table->date('tgl_terbit')->nullable();
+            $table->string('penerbit')->nullable();
+            $table->text('deskripsi')->nullable();
+            $table->text('kondisi')->nullable();
+            $table->string('penulis')->nullable();
+            $table->string('upload_bukti')->nullable();
+            $table->string('tgl_upload')->nullable();
             $table->timestamps();
         });
     }

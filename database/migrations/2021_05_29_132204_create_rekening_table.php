@@ -15,9 +15,9 @@ class CreateRekeningTable extends Migration
     {
         Schema::create('rekening', function (Blueprint $table) {
             $table->id();
-            $table->integer('iduser');
-            $table->string('namaBank');
-            $table->string('noRekening');
+            $table->integer('iduser')->nullable();
+            $table->string('namaBank')->nullable();
+            $table->string('noRekening')->nullable();
             $table->timestamps();
         });
     }

@@ -15,12 +15,12 @@ class CreatePencarianTable extends Migration
     {
         Schema::create('pencarian', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_user');
-            $table->string('no_transaksi');
-            $table->double('total');
-            $table->text('ket');
-            $table->integer('status');
-            $table->dateTime('tgl_confirm');
+            $table->integer('id_user')->nullable();
+            $table->string('no_transaksi')->nullable();
+            $table->double('total')->nullable();
+            $table->text('ket')->nullable();
+            $table->integer('status')->nullable();
+            $table->dateTime('tgl_confirm')->nullable();
             $table->timestamps();
         });
     }

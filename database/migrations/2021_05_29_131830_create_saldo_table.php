@@ -15,12 +15,12 @@ class CreateSaldoTable extends Migration
     {
         Schema::create('saldo', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_user');
-            $table->string('no_transaksi');
-            $table->double('saldo_in');
-            $table->double('saldo_out');
-            $table->double('qty');
-            $table->text('ket');
+            $table->integer('id_user')->nullable();
+            $table->string('no_transaksi')->nullable();
+            $table->double('saldo_in')->nullable();
+            $table->double('saldo_out')->nullable();
+            $table->double('qty')->nullable();
+            $table->text('ket')->nullable();
             $table->timestamps();
         });
     }

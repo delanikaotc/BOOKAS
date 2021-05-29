@@ -15,10 +15,10 @@ class CreateCartTable extends Migration
     {
         Schema::create('cart', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_pembeli');
-            $table->integer('id_penjual');
-            $table->integer('id_product');
-            $table->double('qty');
+            $table->integer('id_pembeli')->nullable();
+            $table->integer('id_penjual')->nullable();
+            $table->integer('id_product')->nullable();
+            $table->double('qty')->nullable();
             $table->timestamps();
         });
     }
