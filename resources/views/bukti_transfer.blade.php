@@ -25,31 +25,54 @@
             </div>
             <hr class="hr1">
             <div style="padding-left:20px;">
-              <b>BANK : MANDIRI</b> <br>
-              <b>Atas Nama : Ankun</b> <br>
-              <b>Nomor Rekening : 404</b>
-              <hr>
+                <div class="row">
+                    <div class="col-3">
+                        <b>BANK : BNI</b> <br>
+                        <b>Atas Nama : BOOKAS</b> <br>
+                        <b>Nomor Rekening : 171749990</b>
+                    </div>
+                    <div class="col-3">
+                        <b>BANK : MANDIRI</b> <br>
+                        <b>Atas Nama : BOOKAS</b> <br>
+                        <b>Nomor Rekening : 171749990</b>
+                    </div>
+                    <div class="col-3">
+                        <b>BANK : BCA</b> <br>
+                        <b>Atas Nama : BOOKAS</b> <br>
+                        <b>Nomor Rekening : 171749990</b>
+                    </div>
+                    <div class="col-3">
+                        <b>BANK : GOPAY</b> <br>
+                        <b>Atas Nama : BOOKAS</b> <br>
+                        <b>Nomor Rekening : 171749990</b>
+                    </div>
+                </div>
+            <hr>
             </div>
             <div class="header-bottom">
-              <?php $total_price = 0; ?>
-              @foreach($items as $row)
-                  <?php $total_price += $row->price*$row->qty; ?>
-              @endforeach
-              <b>Total yang harus di transfer : </b>  Rp. {{ number_format($total_price, 0,",",".") }}
-              <!-- <div class="totalcart">Rp. {{ number_format($total_price, 0,",",".") }}</div> -->
+                <?php $total_price = 0; ?>
+                @foreach($items as $row)
+                <?php $total_price += $row->price * $row->qty; ?>
+                @endforeach
+                <b>Total yang harus di transfer : </b> Rp. {{ number_format($total_price, 0,",",".") }}
+                <!-- <div class="totalcart">Rp. {{ number_format($total_price, 0,",",".") }}</div> -->
             </div>
         </div>
         <div>
-          @include("alert.alert")
+            @include("alert.alert")
             <form action="{{ route('uploadbukti')}}" enctype="multipart/form-data" method="POST">
                 @csrf
                 <input type="hidden" name="no_transaksi" value="{{$no_transaksi}}">
                 <div style="margin-left: 135px;width: 1169px;">
-                  <b>Foto Transfer : </b> <input type="file" name="image" class="form-control" value="" required>
+                    <b>Foto Transfer : </b> <input type="file" name="image"  value="" required>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-uploadbuktitrf"><p>Upload bukti transfer sekarang</p></button>
-                <a class="btn btn-uploadbuktitrf2 mt-4"  href="{{ url('/pesanan') }}"><p>Upload bukti transfer nanti</p></a>
+                <button type="submit" class="btn btn-uploadbuktitrf">
+                    <p>Upload bukti transfer sekarang</p>
+                </button>
+                <a class="btn btn-uploadbuktitrf2 mt-4" href="{{ url('/pesanan') }}">
+                    <p>Upload bukti transfer nanti</p>
+                </a>
             </form>
         </div>
         @include("component.nav_footer")
