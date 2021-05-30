@@ -50,6 +50,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    dd($users)
                                         @foreach($users as $user)
                                         <tr>
                                             @if(is_null($user))
