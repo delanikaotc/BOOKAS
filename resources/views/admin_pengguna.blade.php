@@ -50,7 +50,8 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @forelse($users as $user)
+                                    @php dd($users) @endphp
+                                        @foreach($users as $user)
                                         <tr>
                                             <td>{{ $user->id }}.</td>
                                             <td>{{ $user->role_id }}</td>
@@ -62,7 +63,7 @@
                                         <tr>
                                             <td> sorry bray ganemu </td>
                                         </tr>
-                                        @endforelse
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
