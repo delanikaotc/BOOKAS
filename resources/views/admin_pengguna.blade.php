@@ -50,7 +50,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    @php dd($users) @endphp
                                         @forelse($users as $user)
                                         <tr>
                                             <td>{{ $user->id }}.</td>
