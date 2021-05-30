@@ -12,7 +12,7 @@ class AdminController extends Controller
 {
     public function index(){
         $users = DB::select('select * from user');
-        return view('admin_pengguna', ['user'=>$users]);
+        return view('admin_pengguna', ['users'=>$users]);
     }
 
     public function destroy($id){
