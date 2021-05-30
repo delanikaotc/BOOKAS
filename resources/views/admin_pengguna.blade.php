@@ -56,7 +56,7 @@
                                             @if(is_null($user))
                                             <td> sorry bray ganemu </td>
                                             @else
-                                            <td>{{ $user->id }}</td>
+                                            <td>{{ $user->id }}.</td>
                                             <td>{{ $user->role_id }}</td>
                                             <td>{{ $user->email }}</td>
                                             <td>{{ $user->name }}</td>
