@@ -51,19 +51,19 @@
                                     </thead>
                                     <tbody>
                                     dd($users)
-                                        @foreach($users as $user)
+                                        @forelse($users as $user)
                                         <tr>
-                                            @if(is_null($user))
-                                            <td> sorry bray ganemu </td>
-                                            @else
                                             <td>{{ $user->id }}.</td>
                                             <td>{{ $user->role_id }}</td>
                                             <td>{{ $user->email }}</td>
                                             <td>{{ $user->name }}</td>
                                             <td><a href="admin-pengguna/delete/{{ $user->id }}" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
-                                            @endif
                                         </tr>
-                                        @endforeach
+                                        @empty
+                                        <tr>
+                                            <td> sorry bray ganemu </td>
+                                        </tr>
+                                        @endforelse
                                     </tbody>
                                 </table>
                             </div>
