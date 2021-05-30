@@ -55,14 +55,12 @@
                                             @if(is_null($user))
                                             <td> sorry bray ganemu </td>
                                             @else
-                                        <tr>
                                             <td>{{ $user->id }}</td>
                                             <td>{{ $user->role_id }}</td>
                                             <td>{{ $user->email }}</td>
                                             <td>{{ $user->name }}</td>
                                             <td><a href="admin-pengguna/delete/{{ $user->id }}" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
-                                        </tr>
-                                        @endif
+                                            @endif
                                         </tr>
                                         @endforeach
                                     </tbody>
