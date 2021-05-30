@@ -50,12 +50,12 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($user as $user)
+                                        @foreach ($users as $user)
                                         <tr>
-                                            <td>{{ $user->id }}</td>
-                                            <td>{{ $user->role_id }}</td>
-                                            <td>{{ $user->email }}</td>
-                                            <td>{{ $user->name }}</td>
+                                            <td>{{ $users->id }}</td>
+                                            <td>{{ $users->role_id }}</td>
+                                            <td>{{ $users->email }}</td>
+                                            <td>{{ $users->name }}</td>
                                             <td><a href="admin-pengguna/delete/{{ $user->id }}" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
                                         </tr>
                                         @endforeach
