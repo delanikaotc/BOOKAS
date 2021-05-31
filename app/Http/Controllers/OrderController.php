@@ -157,9 +157,9 @@ class OrderController extends Controller
 
   public function list_penjualan()
   {
-    $items = Order::join('user', 'user.id', '=', 'public.order.id_penjual')
-                  ->select('public.order.*', 'user.name as nama_penjual')
-                  ->where('public.order.id_penjual', session()->get('id'))
+    $items = Order::join('user', 'user.id', '=', 'order.id_penjual')
+                  ->select('order.*', 'user.name as nama_penjual')
+                  ->where('order.id_penjual', session()->get('id'))
                   ->orderBy('order.id', 'desc')
                   ->get();
     return view("penjualan", [
@@ -171,9 +171,9 @@ class OrderController extends Controller
   {
     if (in_array($stt, array('3','4'))) {
       if ($stt==3) {
-        $tgl = 'public.order.tgl_confirm_pengiriman';
+        $tgl = 'tgl_confirm_pengiriman';
       }else {
-        $tgl = 'public.order.tgl_confirm_selesai';
+        $tgl = 'tgl_confirm_selesai';
       }
       $product = Order::where('no_transaksi', $id)->first();
       Order::where('no_transaksi', $id)->update(['status'=>$stt, $tgl=>date('Y-m-d H:i:s')]);
