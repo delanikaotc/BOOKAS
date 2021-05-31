@@ -34,7 +34,7 @@ class CreateOrderTable extends Migration
             $table->text('foto_bukti')->nullable();
             $table->dateTime('tgl_bukti')->nullable();
             $table->dateTime('tgl_confirm_admin')->nullable();
-            $table->dateTime('tgl_confirm_pengirimann')->nullable();
+            $table->dateTime('tgl_confirm_pengiriman')->nullable();
             $table->dateTime('tgl_confirm_selesai')->nullable();
             $table->timestamps();
         });
