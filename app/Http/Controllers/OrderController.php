@@ -160,7 +160,7 @@ class OrderController extends Controller
     $items = Order::join('user', 'user.id', '=', 'public.order.id_penjual')
                   ->select('public.order.*', 'user.name as nama_penjual')
                   ->where('public.order.id_penjual', session()->get('id'))
-                  ->orderBy('public.order.id', 'desc')
+                  ->orderBy('order.id', 'desc')
                   ->get();
     return view("penjualan", [
       'items'=>$items
@@ -171,9 +171,9 @@ class OrderController extends Controller
   {
     if (in_array($stt, array('3','4'))) {
       if ($stt==3) {
-        $tgl = 'tgl_confirm_pengiriman';
+        $tgl = 'public.order.tgl_confirm_pengiriman';
       }else {
-        $tgl = 'tgl_confirm_selesai';
+        $tgl = 'public.order.tgl_confirm_selesai';
       }
       $product = Order::where('no_transaksi', $id)->first();
       Order::where('no_transaksi', $id)->update(['status'=>$stt, $tgl=>date('Y-m-d H:i:s')]);
