@@ -176,7 +176,7 @@ class OrderController extends Controller
         $tgl = 'tgl_confirm_selesai';
       }
       $product = Order::where('no_transaksi', $id)->first();
-      Order::where('no_transaksi', $id)->update(['status'=>$stt, "$tgl"=>date('Y-m-d H:i:s')]);
+      Order::where('no_transaksi', $id)->update(['status'=>$stt, $tgl=>date('Y-m-d H:i:s')]);
       if ($stt==4) {
         $total = $product->price*$product->qty;
         $data = [
