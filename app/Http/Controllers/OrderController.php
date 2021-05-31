@@ -157,10 +157,10 @@ class OrderController extends Controller
 
   public function list_penjualan()
   {
-    $items = Order::join('user', 'user.id', '=', 'order.id_penjual')
-                  ->select('order.*', 'user.name as nama_penjual')
-                  ->where('order.id_penjual', session()->get('id'))
-                  ->orderBy('order.id', 'desc')
+    $items = Order::join('user', 'user.id', '=', 'public.order.id_penjual')
+                  ->select('public.order.*', 'user.name as nama_penjual')
+                  ->where('public.order.id_penjual', session()->get('id'))
+                  ->orderBy('public.order.id', 'desc')
                   ->get();
     return view("penjualan", [
       'items'=>$items
