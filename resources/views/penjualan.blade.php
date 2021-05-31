@@ -57,7 +57,6 @@
                           $arr_warna = array('danger', 'warning', 'primary', 'info', 'success');
                           $arr_status = array('Proses Pembayaran', 'Menunggu Persetujuan Admin', 'Menunggu Persetujuan Penjual', 'Proses Pengiriman', 'Selesai');
                           ?>
-                          @php dd($items) @endphp
                           @foreach ($items as $value):
                             <tr>
                               <td>{{ $value->no_transaksi }}</td>
