@@ -16,8 +16,8 @@ class CartController extends Controller
     public function index(){
         // view the cart items
         $items = Cart::join('product', 'product.id', '=', 'cart.id_product')
-                      ->join('user', 'user.id', '=', 'cart.id_penjual')
-                      ->select('cart.*', 'product.name', 'product.price', 'product.deskripsi', 'product.image', 'user.name as nama_penjual')
+                      ->join('public.user', 'public.user.id', '=', 'cart.id_penjual')
+                      ->select('cart.*', 'product.name', 'product.price', 'product.deskripsi', 'product.image', 'public.user.name as nama_penjual')
                       ->where('id_pembeli', session()->get('id'))
                       ->orderBy('id', 'desc')
                       ->get();
@@ -67,8 +67,8 @@ class CartController extends Controller
     public function pembayaran($id=''){
         // view the cart items
         $items = Cart::join('product', 'product.id', '=', 'cart.id_product')
-                      ->join('user', 'user.id', '=', 'cart.id_penjual')
-                      ->select('cart.*', 'product.name', 'product.price', 'product.deskripsi', 'product.image', 'user.name as nama_penjual')
+                      ->join('public.user', 'public.user.id', '=', 'cart.id_penjual')
+                      ->select('cart.*', 'product.name', 'product.price', 'product.deskripsi', 'product.image', 'public.user.name as nama_penjual')
                       ->where('id_pembeli', session()->get('id'))
                       ->orderBy('id', 'desc')
                       ->get();

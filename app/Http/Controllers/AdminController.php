@@ -11,7 +11,7 @@ use App\Http\Controllers\Controller;
 class AdminController extends Controller
 {
     public function index(){
-        $users = DB::select('select * from public.user');
+        $users = DB::select('select * from user');
         return view('admin_pengguna', ['users'=>$users]);
     }
 
