@@ -44,12 +44,15 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">ID Transaksi</th>
-                                <th scope="col">Waktu</th>
-                                <th scope="col">Pesanan</th>
-                                <th scope="col">Total</th>
-                                <th scope="col">Status</th>
-                                <th>Aksi</th>
+                                <th scope="col" style="font-size: 12px;">ID Trans</th>
+                                <th scope="col" style="font-size: 12px;">Waktu</th>
+                                <th scope="col" style="font-size: 12px;">Nama</th>
+                                <th scope="col" style="font-size: 12px;">Pesanan</th>
+                                <th scope="col" style="font-size: 12px;">No.Telp</th>
+                                <th scope="col" style="font-size: 12px;">Alamat</th>
+                                <th scope="col" style="font-size: 12px;">Total</th>
+                                <th scope="col" style="font-size: 12px;">Status</th>
+                                <th style="font-size: 12px;">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -59,14 +62,17 @@
                           ?>
                           @foreach ($items as $value):
                             <tr>
-                              <td>{{ $value->no_transaksi }}</td>
-                              <td>{{ $value->created_at }}</td>
-                              <td>{{ $value->name }}</td>
-                              <td>Rp. {{ number_format($value->price*$value->qty, 0,",",".") }}</td>
-                              <td>
+                              <td style="font-size: 12px;">{{ $value->no_transaksi }}</td>
+                              <td style="font-size: 12px;">{{ $value->created_at }}</td>
+                              <td style="font-size: 12px;">{{ $value->nama_pembeli }}</td>
+                              <td style="font-size: 12px;">{{ $value->qty }}, {{ $value->name }}</td>
+                              <td style="font-size: 12px;">{{ $value->phone }}</td>
+                              <td style="font-size: 12px;">{{ $value->address }}</td>
+                              <td style="font-size: 12px;">Rp. {{ number_format($value->price*$value->qty, 0,",",".") }}</td>
+                              <td style="font-size: 12px;">
                                 <label class="badge badge-{{ $arr_warna[$value->status] }}">{{ $arr_status[$value->status] }}</label>
                               </td>
-                              <td>
+                              <td >
                                 <?php $btn_confirm=false; $stt='';
                                 if ($value->status==2) {
                                   $stt=3;
@@ -78,7 +84,7 @@
                                 }
                                 ?>
                                 @if ($btn_confirm)
-                                  <a href="confirm-status/{{ $value->no_transaksi }}/{{ $stt }}" class="btn btn-success" onclick="return confirm('Anda Yakin?')">Confirm</a>
+                                  <a href="confirm-status/{{ $value->no_transaksi }}/{{ $stt }}" class="btn btn-success" onclick="return confirm('Anda Yakin?')" style="font-size: 10px;">Confirm</a>
                                 @endif
                               </td>
                             </tr>
@@ -88,6 +94,7 @@
                 </div>
             </div>
             <!-- END Profilesaya -->
+
 
         </div>
       </div>

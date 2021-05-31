@@ -50,6 +50,8 @@ class OrderController extends Controller
                   'id_product'   => $value->id_product,
                   'nama_penjual' => $penjual->name,
                   'nama_pembeli' => $pembeli->name,
+                  'phone'        => $pembeli->phone,
+                  'address'      => $pembeli->address,
                   'name'         => $product->name,
                   'price'        => $product->price,
                   'qty'          => $value->qty,

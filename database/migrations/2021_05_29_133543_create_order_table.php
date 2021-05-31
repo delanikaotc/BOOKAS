@@ -21,6 +21,8 @@ class CreateOrderTable extends Migration
             $table->integer('id_product')->nullable();
             $table->string('nama_penjual')->nullable();
             $table->string('nama_pembeli')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('address')->nullable();
             $table->string('name')->nullable();
             $table->double('price')->nullable();
             $table->double('qty')->nullable();
